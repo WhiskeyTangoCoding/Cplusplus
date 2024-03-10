@@ -1,0 +1,48 @@
+/*Version: 17.9.2 C++17*/
+
+// 'Declaration' of a Function() - header.h file:
+/**/
+
+#include <iostream>					    // #Pre-processor directive (Input-Output-Stream) Standard Library
+
+int NikoHasNoLife(int&);        // This is a 'Function() Prototype'.
+
+/**/
+/*=================================================    End of Declaration    ========================================================*/
+
+
+int main()
+{
+
+    int noLife{};
+    std::cout << "USer please enter a value: ";
+    std::cin >> noLife;
+
+    int LifeNiko = NikoHasNoLife(noLife);
+    std::cout << "Niko " << noLife << " + 1 equals  " << LifeNiko;
+
+
+    /**/
+    std::cout << "\n\n";
+    runmain.sayExit();
+
+    // Clean up and exit program
+    system("pause>0");
+    return 0;
+}											            // End of PROGRAM... Out of S C O P E -> LIFO 'Deallocation' of memory (off the stack).
+
+
+/**/
+/*=======================================================    End Main    ============================================================*/
+
+// 'Definition' of a Function() - Source code: "Make our Functions()" source.ccp file:
+/**/
+
+int NikoHasNoLife(int& niko)
+{
+    return niko + 1;
+}
+
+/**/
+/*=================================================    End of Definition    =========================================================*/
+// ---																															                                                             --- //
