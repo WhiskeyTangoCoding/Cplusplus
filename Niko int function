@@ -24,7 +24,6 @@ int main()
 
     /**/
     std::cout << "\n\n";
-    runmain.sayExit();
 
     // Clean up and exit program
     system("pause>0");
