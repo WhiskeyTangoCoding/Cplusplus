@@ -1,12 +1,12 @@
 /**/
 /*	Which language has the fastest runtime?
 
-		Why is C++ the fastest language? One of the most important factors to consider when ranking programming languages is 'speed'.
-			-is the fastest language according to several measures, including 'compilation time' and 'execution speed'.
+	Why is C++ the fastest language? One of the most important factors to consider when ranking programming languages is 'speed'.
+		-is the fastest language according to several measures, including 'compilation time' and 'execution speed'.
 	        -gets compiled directly into machine code (Binary 0's and 1's). Its layers (Hence, computations) are directly proportional to the processor.
 
 	 C++ is a language that uses a compiler, not to mention it is a much 'lower-level' programming language than C#, Java, Python, etc.
-			-For eg. Python takes 25 times more time to run the same algorithm compared to C++.
+		-For eg. Python takes 25 times more time to run the same algorithm compared to C++.
 */
 
 /**/
@@ -50,6 +50,7 @@
 
 	-BitLocker Drive Encryption is an integral security feature for Windows computers. It provides protection for your computer's operating system
 		as well as the data stored it, ensuring that the data remains encrypted even if the computer is tampered with when the operating system is not running.
+
 	-BitLocker enables users to encrypt everything on the drive Windows is installed on, protecting that data from theft or unauthorized access.
 */
 
