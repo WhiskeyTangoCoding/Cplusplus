@@ -41,13 +41,13 @@
 /**/
 /*	Advantages of C++
 
-		-Very widely used / supported
-		-Many libraries available
-		-Resulting code is very fast albeit the code is properly programmed
-		-Syntax is similar to Java/JavaScript/other languages
-		-C++ programmers get 'hired', if you can program in C++ you can program in Python
-		-Code is highly customizable ie. operator-overloading, defining, etc.
-		-C++ will be around for a long, long time... It's going nowhere.
+	   -Very widely used / supported
+	   -Many libraries available
+	   -Resulting code is very fast albeit the code is properly programmed
+	   -Syntax is similar to Java/JavaScript/other languages
+	   -C++ programmers get 'hired', if you can program in C++ you can program in Python
+	   -Code is highly customizable ie. operator-overloading, defining, etc.
+	   -C++ will be around for a long, long time... It's going nowhere.
 
 	Disadvantages of C++
 
