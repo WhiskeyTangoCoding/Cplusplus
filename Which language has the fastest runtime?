@@ -42,7 +42,7 @@
 /*	VS: Solution     Configuration		  Solution Platforms	(platforms you're targeting your code to USers)
 
 		  Debug					 x64			          (64-bit O/S)
-									   x86			          (32-bit O/S) - Win32
+					                 x86			          (32-bit O/S) - Win32
 */
 
 /**/
