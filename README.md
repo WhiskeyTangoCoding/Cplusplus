@@ -7,8 +7,8 @@
 - Determination. Dedication. Commitment. Satisfaction.
 - "I strive to Desire - I desire to Strive"
 - 
-- 👀 I’m interested in ... Programming and Design
-- 🆚 I’m currently learning ... C++ C# WinForm WPF XAML
+- 👀 I’m interested in ... Programming and Design of Windows applications
+- 🆚 I’m currently driving code in ... C++  C# WinForms WPF XAML   (.NET Framework)
 - 💞️ I’m looking to collaborate on ... Currently, am creating & designing my own projects
 - 📫 How to reach me ... purearchcomputerit@outlook.com
 - 
