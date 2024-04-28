@@ -3,7 +3,9 @@
 - 
 - Triple Degrees: Eng. Design & Drafting (College degree). IT/Network Systems Administrator (College degree). 
 - Self-taught coder. Self-Learner. Self-Motivator.           C# Software Developer (Microsoft certification)
-- Determination. Dedication. Commitment.
+- 
+- Determination. Dedication. Commitment. Satisfaction.
+- "I strive to Desire - I desire to Strive"
 - 
 - 👀 I’m interested in ... Programming and Design
 - 🆚 I’m currently learning ... C++ C# WinForm WPF XAML
