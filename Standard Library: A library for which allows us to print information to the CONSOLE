@@ -1,0 +1,76 @@
+/**/
+/*	#include <iostream>		aka. #header files
+
+   Standard Library: A library for which allows us to print information to the CONSOLE
+
+	#Pre-processor directive (Input-Output-Stream) C/C++ Standard Library
+
+		-#header files do NOT get compiled, at all. Just .cpp files do.
+		-header files get included via. Pre-processor statement called #include into a .cpp file (this is when they get compiled)
+		-This particular library is used for input / output streams		ie. istream-ostream
+		-It will allow us to use std::cout to print or to return output to the CONSOLE.
+
+		.cpp files get compiled individually into an .obj or object file
+		-The 'linker' takes all of the .obj files, and places them into an .exe or executable file...
+*/
+
+/**/
+/* #pragma once is a pre-processor directive used to prevent header files from being included multiple times.
+	   The #pragma once directive, once present in a file, assures that the file will not be included multiple times in the current project.
+*/
+
+/**/
+/* What is the int main() {} function() {body}?		Note that it is a 'built in' Function();
+
+	   A function is a group of statements that together perform a task. Every C++ program has at least one function, which is main() {}
+
+	   ** This is also where ALL of the MAGIC happens when line coding...
+
+			   -The system "calls" main() {} and it is, in fact, an int function; therefore, the... It is a special case.
+			   -Each C++ program MUST have a main function for which is operational when the program is loaded.
+			   -You don't have to return any kind of value from the main function.
+			   -Main function has an int return type
+			   -If you don't return anything - it will assume that you are returning 0.
+
+			   -The system also wants to know "Hey! program? Did you run ok?" ie. return 0;
+			   -Program may compile-run w/o this, but it is recommended to use it...
+
+	   ** Between the curly brackets, this is the {body} of our main Function(), and also where we place our 'statements' and/or 'instructions'...
+
+		   -Every 'statement' also ends with a ; 'semi-colon'. IT IS very IMPORTANT !! because the semi-colon; is also a 'terminator'.
+			   The line CODE (for the compiler) being RUN needs to know when to (STOP or to END) on at each line!
+
+		   ** Note that a program is executed 'line-by-line' in the order it appears in your source code until a function is reached.
+
+		   system("pause>0");			This is so the | CONSOLE | stays OPEN when I 'output' results to you viewers !!
+		   return 0;					Tells the O/S to inform the USer that everything ran smoothly!!
+
+	  }								A console | RETURN | of '0' (or an Empty line) is also a good thing! Hence, NO Xx_ERRORS_xX !!
+*/
+
+/**/
+/*	DID you know? Line code within the body of int main() {} WILL always be | RETURNED | as OUTPUT by the compiler into your CONSOLE.
+		   ** NOTE: that ALL (Single and Multi) comments are IGNORED by the Compiler **
+
+	   ** 3 MAIN parts or sections of your line coding ESSAY, if you will:
+		   Here comparing the C++ sections to an ESSAY: The main parts (or sections) to an essay are the 'Intro, body, and conclusion'. Right?
+		   Well in... VISUAL STUDIO 2022: In C or C++ or C#, it's basically... #header.h, int main() {body}, Source.cpp
+*/
+
+/**/
+/*	Below: is all you need to begin. Also, don't forget to #include <iostream> above int main() {}
+
+   int main() {
+
+	   std::cout << "Hello World !!" << std::endl;
+	   std::cout << "The ox was eating pizza in the backyard." << std::endl;
+
+
+
+
+
+   system("pause");
+   return 0;
+   }
+
+*/
