@@ -1,0 +1,71 @@
+/**/
+/*'DATA TYPES': How values are stored into temporary RAM memory
+
+	  'int'  THINK? (integer values or WHOLE numbers) 1,2,5, 11, 56, 476, and so on... RANGE: - 2 Billion to 2 Billion (Stores 4 bytes)
+	   ---
+	  'double' in C++ is a 'versatile' data type that can represent any numerical value in the compiler, including decimal values.
+			  -is also a primitive data type that is used to store 'floating-point' values up to 15 digits.
+	   REAL NUMBERS: There are two types of 'double' data types: Whole numbers as well as Fractional numbers with values.
+
+	   ** Real numbers are numbers that include both rational and irrational numbers. Rational numbers such as integers (-2, 0, 1),
+		  fractions(1/2, 2.5), and irrational numbers such as SQUARE ROOT of 3, pi(22/7), etc., are all real numbers.
+	   ---
+	  'float' A floating point type variable holds a number with a fractional component, such as 4320.0, -3.33, or 0.01226.
+			  Floating-point numbers MUST contain a decimal point.
+			  -is a primitive data type that holds floating values up to 7 digits.
+
+	  'float'  THINK ? (Decimal numbers)
+	  ---
+	  'string' is: in C++, is an object that represents a 'sequence of characters'. For eg. string: "THis is a string of random T E X T !";
+			   Note: In C, a string is actually a one-dimensional 'array of characters' which is terminated by a null character '\0'.
+
+				 0   1   2   3   4   5   6
+			   ------------------------------
+			   | S | c | a | l | e | r | \0 |							null character '\0'
+			   ------------------------------
+			   See Example_10 C Style character String_modded
+	  ---
+	  'char' is: A char is a C++ data type used for the storage of letters. Char is an integral data type, meaning the value is stored as an integer (Dec).
+				 It occupies a memory size of 1 byte. C++ Char only stores single character. Char values are interpreted as ASCII characters.
+				 -is a single character such as 'C' , 'a' , '5'
+*/
+
+/**/
+/* Bool...  Boolean is yet another Data type: THINK? 'TRUE or FALSE' statements
+					Simply put, a Boolean variable can ONLY have two (2) possible values: 'True' or 'False'
+
+				 Boolean values declared 'true' are assigned the value of: '1', and 'false' values are assigned the value of: '0'
+					(Note that we are NOT referring to Binary numbers here)...
+*/
+
+/*	The memory for a <string> is a sequence of...
+
+		The memory for a string is a sequence of consecutive bytes, each holding one character.
+
+		The amount of memory reserved for a string variable is automatically increased or decreased
+			to fit the the number of characters stored in the string as the program runs.
+
+		A simple technique to avoid cascading errors is flushing the input stream using the ignore() function.
+			The ignore() function reads and discards characters obtained from input.
+
+		The get() function gets the next character from the input stream. The get() function is overloaded,
+			meaning it can accept a varying number of parameters depending on how it is used.
+*/
+
+/**/
+/*	#include <string>		The C++ getline() function:
+
+		Is a standard library function that is used to read a string, or a line from an input stream ie. CONSOLE.
+		-A 'built-in' function defined in the <string> header file that allows accepting and reading single/multiple line strings from the input stream.
+
+		The getline() function extracts characters from the input stream, and appends it to the string object until the delimiting character is encountered.
+			NOTE: In C++, the cin object also allows input from the user, but NOT 'multi-word' or 'multi-line input'.
+
+			cout << name;  return Frank			If you use, getline(cin, name)		returns Frank West
+				Whereas, cin >> USER enters Frank. Frank is only returned.
+
+		What is the push back operation in string C++?
+
+			C++ String push_back()
+			This function is used to add new character ch at the end of the string, increasing its length by one.
+*/
