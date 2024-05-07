@@ -7,10 +7,10 @@
 
 #define _USE_MATH_DEFINES					// #header files
 //#define BUFFER 512						// This is a macro
-#include <iostream>							// #Pre-processor directive (Input-Output-Stream) Standard Library
+#include <iostream>						// #Pre-processor directive (Input-Output-Stream) Standard Library
 #include <cmath>
 //#include <complex>
-//#include <string>							// String "is aka. an ARRAY of characters" (String literal)
+//#include <string>						// String "is aka. an ARRAY of characters" (String literal)
 #include<vector>
 //#include <map>
 
