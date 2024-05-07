@@ -23,11 +23,12 @@
 
 		// Move assignment operator					vs.			// Copy assignment operator
 		Person& operator=(Person&& right)						Person& operator=(const Person &right)
-		{	if (this != &right)									{	if (this != &right)	
-			{														{
-				swap(name, right.name);									name = new char[strlen(right.name) + 1];
-			}															strcopy(name, right.name);	
-			return *this;											}
-		}															return *this;
-																}
+		{	if (this != &right)							{	
+													if (this != &right)	
+			{										{
+				swap(name, right.name);								name = new char[strlen(right.name) + 1];
+			}											strcopy(name, right.name);	
+			return *this;									}
+		}												return *this;
+												}
 */
