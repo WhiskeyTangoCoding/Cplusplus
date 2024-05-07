@@ -1,0 +1,47 @@
+/**/
+/*DID you know? The 'variable' itself HOLDS or STORES a number value into MEMORY. -> RAM (Random Access Memory) is temporary memory.
+
+		Values can be STORED either in a 'variable or variable name'. 'Variables' such as x, y, and z.
+		eg. of Variable names: memoryX, memoryY, iloveMath, mathisaDub, and so on...
+
+		int x;			// Storing or holding 'garbage' or random data...
+		int y{};		// the variable 'y' now has a value of '0' stored in memory.
+
+		** Is null == 0 in C++?
+
+				In C++, Null is defined as 0. Null or 0 is an integer.
+				Float* p = NULL;	Float* p = 0;	Float* p = nullptr;		All 3 of them will produce the same result.
+*/
+
+/**/
+/*														Data type 'variable'  = value;
+	DID you know? That 'hard-coding' a value to a 'Variable'	For eg. int x = 45;
+																	 (Declaration = Initialization)
+
+		** Note that you ONLY need to declare a 'variable' ONCE within your line code (as above).
+			-Some FOOD for thought: On larger applications
+
+		** If you had the variable 'x' used elsewhere throughout your program; you would only have to change it ONCE, and it would update the new value
+				for every instance of 'x'; unless of course, you had decided to 're-initialize' its value somewhere down your line code.
+*/
+
+/**/
+/*	Temporary Values - What happens 'Under the Hood'? 
+	
+		int x;
+		x = 3 * 5;
+
+			""
+			-When the expression 3 * 5 is evaluated, the vale 15 is stored in memory as a 'temporary' value.
+			-The 'temporary' value is then stored in the 'x'  variable.
+			-Then, the 'temporary' value is discarded.
+
+		int square(int a)
+		{
+			return a * a;
+		}
+			-Similar happens even w/ a function when a value is passed as an argument.
+			-The function calculates and stores the result as a 'temporary' value.
+			-The 'temporary' value is copied (assigned) to whichever variable is used in the int main() {body}
+			-The 'temporary' value is no longer needed, so the system discards it.
+*/
