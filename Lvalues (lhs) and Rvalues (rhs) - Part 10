@@ -1,0 +1,31 @@
+/**/
+/*	Lvalues (lhs) and Rvalues (rhs)
+
+		Two types of values stored in memory during the execution of a program:
+
+			-Values that persist beyond the statement that created them, and have names that make them accessible to other statements
+				in the program. In C++, these are called 'lvalues' or (lhs).
+				All things such as variables, objects for which HOLD a 'memory address.'
+
+			-Values that are 'temporary', and cannot be accessed beyond the statement that created them.
+				In C++, these are called 'rvalues' or (rhs).
+*/
+
+/**/
+/*	Rvalue References defined
+		
+		-a reference variable that can refer only to temporary objects that would otherwisehave no name.
+		-are used to write 'move constructors' and 'move assignment operators' (otherwise knows as move semantics).
+		-Anytime you write a class w/ a pointer or reference to a piece of data outside the class, you should implement move semantics.
+		-Move semantics increase the performance of these types of classses.
+
+		// Move assignment operator					vs.			// Copy assignment operator
+		Person& operator=(Person&& right)						Person& operator=(const Person &right)
+		{	if (this != &right)									{	if (this != &right)	
+			{														{
+				swap(name, right.name);									name = new char[strlen(right.name) + 1];
+			}															strcopy(name, right.name);	
+			return *this;											}
+		}															return *this;
+																}
+*/
