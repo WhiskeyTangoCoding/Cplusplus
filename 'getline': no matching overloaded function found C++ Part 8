@@ -1,0 +1,28 @@
+/**/
+/*	'getline': no matching overloaded function found C++
+
+		Can you use getline() in a function C++?
+
+			getline (string) in C++, is a standard library function that is used to read a string or a line from an input stream.
+				-It is a part of the <string> header.
+				-The getline() function extracts characters from the input stream, and appends it to the string object until the
+				 'delimiting character' is encountered (ie. white space).
+
+		** Character strings can be read in using the getline() function. The getline() function accepts three arguments, the first argument
+		   is a char array, the second argument is the length specified as an integer, and the third argument is a 'delimeter character'.
+
+				#define BUFFER 512
+
+				char charBuffer[BUFFER];
+				std::cout << "Please enter a random string of text, press Enter: ";
+				cin.getline(charBuffer, BUFFER, '\n');
+
+				std::cout << "\nYou've entered: " << std::endl;
+				std::cout << charBuffer << std::endl;
+
+		** We can use the ignore() function to skip over any trailing end-of-line characters that might still be in the buffer.
+			-The ignore() function can take two arguments, the first being the maximum number of characters it should possibly read,
+				and the second being the character that when reached will cause the ignore() function to stop reading characters from standard input early.
+
+				cin.ignore(64, '\n');															                                                    Source: simplecplusplus.wordpress.com
+*/
