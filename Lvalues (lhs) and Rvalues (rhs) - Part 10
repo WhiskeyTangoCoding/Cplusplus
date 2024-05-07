@@ -32,3 +32,14 @@
 		}												return *this;
 												}
 */
+
+/**/
+/*	Move constructor vs. Copy constructor
+
+		Person(Person&& temp)									Person(const Person &obj)
+		{	// Steal the name pointer from temp						{	name = new char[strlen(obj.name) + 1];
+			name = temp.name;									strcopy(name, obj.name);
+													}
+			// Nullify the temp object's name pointer.
+			temp.name = nullptr;
+*/
