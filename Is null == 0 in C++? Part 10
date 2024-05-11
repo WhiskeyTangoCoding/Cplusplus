@@ -1,0 +1,58 @@
+
+
+/**/
+/*	Is null == 0 in C++?
+
+		In C++, the value NULL is typically defined as 0, so it's not possible to prevent C++ from recognizing 0 as NULL.
+			However, if you want to distinguish between integer 0 and a null pointer, you can use the nullptr keyword introduced in C++11,
+			which is specifically designed to represent a null pointer.
+
+		Is null value the same as 0?
+
+			The answer to that is rather simple: a NULL means that there is no value, we're looking at a blank/empty cell, and 0 means the
+			value itself is 0.
+			Considering there is a difference between NULL and 0, the way Tableau treats these two values therefore is different as well.
+*/
+
+/**/
+/*	What is contiguous memory allocation in C++?
+
+		Contiguous memory allocation refers to a memory management technique in which whenever there occurs a request by a user process for the memory,
+			one of the sections of the contiguous memory block would be given to that process, in accordance with its requirement.
+
+		It means that memory is allocated as a single chunk. This is most often used when talking about containers. For instance, the vector and
+			string classes use a contiguous chunk of memory.
+
+		The simplest file organization technique is contiguous storage.
+				Contiguous storage places blocks of records that are logically adjacent to one another into physically adjacent sectors.
+				-used by operating systems to allocate memory to processes in contiguous blocks. (in series)
+				In this technique, a process is allocated a single block of memory that is contiguous or adjacent to each other.
+
+		Why do we use memory allocation in C++?
+
+			But the need for functions to store persistent information is the reason we need to allocate memory.
+				(Just to complete the picture: local variables on the stack are said to be "automatically allocated".
+				There is also "static allocation", which happens at compile time and is where global variables live.
+*/
+
+/**/
+/*	Definition of const (constant) in C++
+
+		const in programming is a keyword that defines a variable or pointer as "unchangeable".
+			The define preprocessor directive and the const keyword are the two methods to define a constant.
+
+		Constants are the tokens that are defined at the time of initialization, and the assigned value cannot be altered or updated after that.
+			The value stored in a constant variable is known as a literal. Again, a constant variable MUST be initialized at its declaration.
+
+			For eg.			const int graVity = 9.81;
+
+		** To ensure that your data is NOT going to be modified use const		For eg. void machimeLearn(const BigData &d);
+																				Note: Pass by const Reference where possible
+
+		So, whereever we pass a variable to a function that we DON'T want to be modified, use const Reference
+			const declares that the variable cannot be modified inside the called function
+			We ONLY have to pass the 8-byte reference, which may be far less data vs. the data that we are passing into the function.
+
+			const is similar to giving 'read-only' access...
+*/
+
