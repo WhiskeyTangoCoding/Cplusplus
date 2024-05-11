@@ -1,0 +1,63 @@
+
+
+/**/
+/*	What is runtime library C++?
+
+			The C++ runtime library includes classes required by the ISO C++ standard, including std::ostream and std::vector.
+			There is only one C++ runtime library in widespread use with the GNU toolchain.
+			The GNU C++ Library (also called libstdc++) is provided in the same source package as the GNU C and C++ compilers.
+*/
+
+/**/
+/* Definition of 'Stack'
+
+		Stacks: are a type of container adaptors with LIFO (Last In First Out) type of working, where a new element is added
+				at one end (top), and an element is removed from that end only (when going Out of Scope).
+
+			-aka. 'Static' memory
+			-All stack memory allocation sizes NEED to be know at COMPILE time.
+			-Much more space available (on the stack)
+
+				int val = 5;		// stack where "automatic variables" are allocated.
+
+		-For creating a stack, we must #include <stack> header file in our code. We then use this syntax to define the std::stack
+
+		-Programming stacks are based on the principle of last in first out (LIFO), a commonly used type of data abstract that consists of
+			two major operations, .push(); and .pop();
+*/
+
+/**/
+/*	Definition of 'Heap'
+
+		What is meant by Heap in C++?
+
+			In certain programming languages including C, C++, and Pascal, a 'heap' is an area of pre-reserved computer main storage (memory) that a
+				program process can use to store data in some variable amount that won't be known until the program is running (run time).
+
+			-Heap memory is essentially a large pool of memory (typically per process) from which the running program can request chunks.
+				This is typically called 'Dynamic' allocation.
+			-Memory allocation which depends on 'runtime' variables (dynamic memory size) MUST be heap allocated.
+			-Allocation via. the 'new' keyword
+			-O/S finds a contiguous chunk of memory and returns a pointer to it. (Is also very complicated and expensive on memory)
+
+
+				int* hval = new int;		// heap	(holding a memory address)	int* hval is the pointer name. Here, declaring a Pointer
+				*hval = 5;					// NOTE: Here dereferencing above Pointer to set or assign a value to it.
+
+		** If you need to allocate a large block of memory (e.g. a large array, or a big struct), and you need to keep that variable around a
+				long time (like a global), then you should allocate it on the heap.
+
+		-The heap data structure can be implemented in a range using STL which provides faster (max or min) item retrieval,
+			and faster insertion and deletion on sorted data and also works as a sub-routine for heapsort.
+
+		STL Functions for Heap Operations:
+
+		make_heap():		-Converts given range to a heap.
+		push_heap():		-Arrange the heap after insertion at the end.
+		pop_heap():			-Moves the max element at the end for deletion.
+		sort_heap():		-Sort the elements of the max_heap to ascending order.
+		is_heap():			-Checks if the given range is max_heap.
+		is_heap_until():	-Returns the largest sub-range that is max_heap.
+
+		** All of the above functions are defined inside the #include <algorithm> header file.
+*/
