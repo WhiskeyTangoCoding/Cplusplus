@@ -1,0 +1,50 @@
+
+
+/**/
+/*	The main differences are: 'Stack' and 'Heap'
+
+		** When a program is launched, O/S gives access to the two different types of memory in C++ (STACK and HEAP)
+			-Both 'stack' and 'heap' are stored in RAM. At a basic level, both just store data.
+			-Stack memory has a pre-defined size (few MegaBytes)
+			-Very easy to run out of stack memory (ie. stack over-flow)
+			-Local variables w/o 'new' are allocated on the stack by default:
+			-Program function calls/return addresses are also allocated (on the stack)
+
+		The main differences are:
+				-The size of available memory
+				-The way memory is found/allocated
+				-The speed of memory allocation
+				-The way we request memory in our code
+				-Stack memory deallocates when it goes 'out of scope'
+				-Heap memory WILL remain in the heap if not removed (memory leak)... via. 'delete' keyword
+
+		** Heap is used when we need large memory variables to be used globally, and resizing is to be done frequently, whereas stack is used when
+				the small variables need to be stored till the execution of function only and no/ very less resizing is to be done.
+*/
+
+/**/
+/*	What is static binding or compile time binding?
+
+		Static Binding is also known as Compile Time Binding. Static binding occurs when the connection between a function call and its definition
+			is set when your program is being prepared for running, called Compile Time. Think of default settings as how something works,
+			like how a tool behaves when you use it.
+
+		By default, C++ matches a function call with the correct function definition at compile time. This is called static binding.
+			You can specify that the compiler match a function call with the correct function definition at runtime; this is called dynamic binding.
+*/
+
+/**/
+/*	Definition of dynamic runtime binding in C++
+
+		Binding at runtime is known as dynamic binding.
+			There are instances in our program when the compiler cannot get all the information at compile time to resolve a function call.
+				These function calls are linked at runtime. 
+
+		Dynamic binding in C++ is a practice of connecting the function calls with the function definitions by avoiding the issues with static binding,
+			which occurred at build time. Because dynamic binding is flexible, it avoids the drawbacks of static binding, which connected the
+			function call and definition at build time.
+
+		The general meaning of binding is linking something to a thing. Here linking of objects is done. In a programming sense, we can describe
+			binding as linking function definition with the function call. So the term dynamic binding means to select a particular function
+			to run until the runtime.
+*/
