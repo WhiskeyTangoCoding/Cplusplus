@@ -1,0 +1,48 @@
+
+
+/**/
+/* What is Compile Time and Runtime?
+
+		1) Compile Time:
+			The instructions or source code written using 'high-level language' is required to get converted to machine code for a computer to understand.
+			During compile time, the source code is translated to a byte code (0's, 1's).
+			During this time, the compiler also checks for the syntax, semantic, and type of the code.
+			So compile time evaluation means that the value of some variable was determined when everything is compiled into object files.
+
+		2) Runtime: A program’s life cycle is a runtime when the program is in execution.
+				-is the final phase of the program lifecycle in which the machine executes the program's code.
+				-The other phases include: Edit time. When the source code of the program is being edited.
+					This phase includes bug fixing, refactoring, and adding new features.
+				-Run time evaluation would mean that the value of some 'variable' has to be determined at runtime.
+
+		Following are the different types of runtime errors:
+
+			-Division by zero – when a number is divided by zero (0)	-nan							(undefined)
+			-Dereferencing a null pointer – when a program attempts to access memory with a NULL.
+			-Running out of memory – when a computer has no memory to allocate to programs...
+
+		** Errors: During compile time errors occur because of 'syntax' and 'semantic'.				** Share Examples_15-16 The stages Compile time...
+
+			-Syntax errors occur because of the wrong syntax of the written code.
+			-Semantic errors occur in reference to variable, function, type declarations, and type checking.
+*/
+
+/**/
+/*		STatically-typed							Dynamically-typed
+
+			C
+			C++											Python
+			C#											JavaScript
+			Java										Ruby
+
+		** Meaning of statically typed language
+				A statically-typed language is a language (such as Java, C, or C++) where variable types are known at compile time.
+
+		** What is dynamically typed language?
+				Dynamically-typed languages are those (like JavaScript) where the interpreter assigns variables a type at runtime based on the
+				variable's value at the time.
+
+		-Dynamic typing means that the type of the variable is determined only during run time.
+				On the other hand, types in Python are determined during run-time as opposed to compile-time and thus programmers are not required
+				to declare variables before using them in the code.
+*/
