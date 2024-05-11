@@ -21,7 +21,7 @@
 			-Dereferencing a null pointer – when a program attempts to access memory with a NULL.
 			-Running out of memory – when a computer has no memory to allocate to programs...
 
-		** Errors: During compile time errors occur because of 'syntax' and 'semantic'.				** Share Examples_15-16 The stages Compile time...
+		** Errors: During compile time errors occur because of 'syntax' and 'semantic'.
 
 			-Syntax errors occur because of the wrong syntax of the written code.
 			-Semantic errors occur in reference to variable, function, type declarations, and type checking.
@@ -31,9 +31,9 @@
 /*		STatically-typed							Dynamically-typed
 
 			C
-			C++											Python
-			C#											JavaScript
-			Java										Ruby
+			C++								Python
+			C#								JavaScript
+			Java								Ruby
 
 		** Meaning of statically typed language
 				A statically-typed language is a language (such as Java, C, or C++) where variable types are known at compile time.
