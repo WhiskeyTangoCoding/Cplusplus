@@ -1,0 +1,35 @@
+
+
+/**/
+/*	Definition of a macro in C++
+
+		Using #define to create Macros		#define _USE_MATH_DEFINES		M_PI;
+
+		A macro is a label defined in the source code that is replaced by its value by the preprocessor before compilation.
+			Macros are initialized with the #define preprocessor command, and can be undefined with the #undef command.
+
+		Macros are used to make a sequence of computing instructions available to the programmer as a single program statement,
+			making the programming task less tedious and less error-prone.
+
+		A macro is a series of commands and actions that can be stored and run whenever you need to perform a computer task.
+			Use macros to automate actions that you perform repeatedly or on a regular basis. Record the macro steps.
+			Build the macro with the editor. No programming skills required.
+*/
+
+/**/
+/* (Min/Max values) of 'int' data type (integers)			 For (32-bit) architecture system
+
+		signed short int					Range: -32,768(min) to 32,767(max) -				Memory Allocation: 2 Bytes
+		unsigned short int					Range:  0 to 65,535(max)							Memory Allocation: 2 Bytes
+
+		int (32-bit)						Range: -2 Billion+(min) to 2 Billion+(max)			Memory Allocation: 4 Bytes
+		long int							Range: -2 Billion+(min) to 2 Billion+(max)			Memory Allocation: 4 Bytes
+		unsigned int (32-bit)				Range:  0 to 4 Billion+								Memory Allocation: 4 Bytes
+		unsigned long int					Range:  0 to 4 Billion+								Memory Allocation: 4 Bytes
+
+		The sizes of 'Variables' might be different from those shown above, depending on the compiler and the computer that you are using.
+
+		My system: Windows 10 Pro OEM (64-bit architecture) Physical Memory (RAM): 32GB 3600MHz CL18
+				   Microsoft Visual Studio Community 2022 (64-bit) - Version 17.8.2
+				   Microsoft .NET Framework	- Version 4.8.09037
+*/
