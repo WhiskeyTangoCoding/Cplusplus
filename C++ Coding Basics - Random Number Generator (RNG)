@@ -1,0 +1,48 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - Random Number Generator (RNG) | C++ for Beginners
+
+---
+	// Minecraft: SEED
+
+	/*	Definition of header ctime in C++
+	
+		The ctime header file contains definitions for C++ for converting between various time and date formats.
+		Include the standard header into a C++ program to effectively include the standard header < time. h > within the std namespace.
+
+		The C++ <ctime> header file declares a set of functions, macros and types to work with date and time.
+		For example, the time() function is used to get the current time.
+
+		The time() function is defined in time. h (ctime in C++) header file.
+		This function returns the time since 00:00:00 UTC, January 1, 1970 (Unix timestamp) in seconds.
+		If second is not a null pointer, the returned value is also stored in the object pointed to by second.
+	*/
+	
+	srand(time(0));
+
+	for (USHORT i = 1; i < 3; i++) {
+		cout << 1 + rand() % 6 << "\n";				// Returns to you a... Random number
+	}	
+
+	/*Pretending that I am rolling two DIE... Max number that we can get from rolling two DIE is: 12
+	
+	Best out of 3
+	
+	If the roll of the two is <= 6... Then, I keep the 'WHITE' background here on my Visual Studio 2022 software. 
+	But, if the roll of the two is > 6... Then, I use the 'BLACK' background here...
+
+	First roll (two DIE) : 2 + 4 = 6		WHITE
+	Second roll (two DIE) : 6 + 5 = 11		BLACK
+	Third roll (two DIE) :	4 + 4			BLACK
+	
+	*/
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
