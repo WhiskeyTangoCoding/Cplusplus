@@ -1,0 +1,95 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - What is Type Casting in C++? | C++ for Beginners
+
+---
+
+//Example of Implicit Type Casting
+    short x = 300;
+    int y;
+    y = x;
+    std::cout << " Implicit Type Casting " << std::endl;
+    std::cout << " The value of y: " << y << std::endl;
+    std::cout << " The value of x: " << x << std::endl;
+
+    int num = 30;
+    char ch = 'a';
+    int res = 30 + 'b';
+
+ float val = num + 'B';
+    std::cout << " Type casting from int data to float type: " << val << std::endl;
+    std::cout << " Type casting char to int data type ('b' to 30): " << res << std::endl;
+
+OUTPUT:
+Implicit Type Casting
+ The value of y: 300
+ The value of x: 300
+ Type casting from int data to float type: 96
+ Type casting char to int data type ('b' to 30): 128
+---
+
+---
+//Example of Explicit Type Casting
+    int x, y;
+    float ans;
+    x = 78;
+    y = 157;
+    std::cout << " Implicit Type Casting: " << std::endl;
+    std::cout << " Result: " << y/x << std::endl;
+      
+    std::cout << " \n Explicit Type Casting: " << std::endl;
+    ans = (float) 157 / 78;
+    std::cout << " The value of float variable (ans): " << ans << std::endl;
+---
+
+---
+// Example of Static Cast
+#include <iostream>
+using namespace std;
+int main()
+{
+    float f = 5.5;
+    int i;
+    i = f;
+    std::cout << "i = "<< i << std::endl;
+    i = static_cast<int> (f);
+    std::cout << "i = "<< i << std::endl;
+    return 0;
+---
+
+---
+// Reinterpret Cast
+#include<bits/stdc++.h>
+ 
+int main(){
+   int a = 70; // ASCII value of F = 70
+   int *int_pointer = &a;
+   char* char_pointer = reinterpret_cast<char *>(int_pointer);
+   std::cout << *char_pointer << std::endl;
+---
+
+---
+// const cast
+#include<bits/stdc++.h>
+
+int fun( int* ptr)
+{
+   return (*ptr);
+}
+
+int main(){
+   const int val = 18;
+   const int *ptr = &val;
+   int* ptr1 = const_cast<int*>(ptr);
+   std::cout << fun(ptr1);
+}
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
