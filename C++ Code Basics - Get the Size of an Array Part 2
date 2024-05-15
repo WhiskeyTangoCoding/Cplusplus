@@ -1,0 +1,110 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Code Basics - Get the Size of an Array | C++ for Beginners
+
+---
+
+//
+const int SIZE = 12;
+int primeN[SIZE] = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37 };
+std::cout << sizeof(primeN);
+
+
+
+// To get the size of an array, you can use the sizeof() operator:
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+cout << sizeof(myNumbers);
+
+---
+
+---
+// To find out how many elements an array has, you have to divide the size of the array by the size of the data type it contains:
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+int getArrayLength = sizeof(myNumbers) / sizeof(int);
+cout << getArrayLength;
+---
+
+---
+// Instead of writing:
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i = 0; i < 5; i++) {
+  cout << myNumbers[i] << "\n";
+}
+---
+
+---
+// It is better to write:
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i = 0; i < sizeof(myNumbers) / sizeof(int); i++) {
+  cout << myNumbers[i] << "\n";
+}
+---
+
+---
+// Note that, in C++ version 11 (2011), you can also use the "for-each" loop:
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i : myNumbers) {
+  cout << i << "\n";
+}
+
+// It is good to know the different ways to loop through an array, since you may encounter them all in different programs.
+
+---
+
+---
+
+int getMinNum(int arrFunc[], int size);
+int getMaxNum(int arrFunc[], int size);
+
+/**/
+// Passing by Pointer Reference
+
+const int SIZE = 12;			// n = 12   (n - 1)
+// Index Position  { 0, 1, 2, 3,  4,  5,  6,  7,  8,  9, 10, 11 }
+int randArray[SIZE]{ 2, 3, 5, 7, -11, 13, 17, 19, -23, 29, -31, 37 };
+
+std::cout << "Min value in our ARRAY is: " << getMinNum(randArray, SIZE) << std::endl;
+std::cout << "Max value in our ARRAY is: " << getMaxNum(randArray, SIZE) << std::endl;
+
+/**/
+
+int getMinNum(int arrFunc[], int size)
+{
+	int min = arrFunc[0];
+	for(int i = 1; i < size; ++i)
+	{
+		if (arrFunc[i] < min)
+		{
+			min = arrFunc[i];
+		}	
+	}
+	return min;
+}
+
+int getMaxNum(int arrFunc[], int size)
+{
+	int max = arrFunc[0];
+	for (int i = 1; i < size; ++i)
+	{
+		if (arrFunc[i] > max)
+		{
+			max = arrFunc[i];
+		}
+	}
+	return max;
+}
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
