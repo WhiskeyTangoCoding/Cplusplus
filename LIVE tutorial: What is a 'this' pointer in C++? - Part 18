@@ -1,0 +1,31 @@
+
+
+/**/
+/*	What is a 'this' pointer in C++?
+
+		The 'this' pointer is a pointer accessible only within the nonstatic member functions of a class , struct , or union type.
+			It points to the object for which the member function is called. Static member functions don't have a 'this' pointer.
+
+		The 'this' pointer is valid ONLY within non-static member functions, or in non-static data member initializers.
+			-An error can occur when the 'this' pointer is used in a function that is not declared in the class."
+
+		Can we delete this pointer in C++?
+
+			In C++, a pointer is a variable that stores the memory address of another variable.
+				When you no longer need the memory that a pointer points to, you can delete the pointer to release that memory.
+				However, deleting a pointer can be a bit tricky and requires some caution to avoid memory leaks and undefined behavior.
+*/
+
+/**/
+/*	Meaning of 'this' ->  in C++
+
+		The -> (arrow) operator is used to access class, structure or union members using a pointer. A postfix expression, followed by an -> (arrow) operator,
+			followed by a possibly qualified identifier or a 'pseudo-destructor' name, designates a member of the object to which the pointer points.
+
+			Arrow operator (->) in C++ also known as 'Class Member Access Operator'
+				-It is used to access the public members of a class, structure, or members of union with the help of a pointer variable.
+				-is an implicit pointer that points to the object of the class of which the member function is called.
+
+			The Dot(.) operator is used to normally access members of a structure or union.			. dot separator
+			The Arrow(->) operator exists to access the members of the structure or the unions using *pointers.
+*/
