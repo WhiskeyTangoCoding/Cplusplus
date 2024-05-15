@@ -1,5 +1,13 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - ASCII Printable characters | C++ for Beginners
+
+---
+
 /*Version: 17.9.2 C++17*/
 
 // ASCII Printable characters
@@ -29,3 +37,9 @@ for (int i = sn; i <= en; ++i)
 {
     std::cout << i << " --> " << char(i) << '\n';
 }
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
