@@ -1,0 +1,79 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - Bubble sort using template function | C++ for Beginners
+
+---
+
+// C++ Program to implement
+
+#include <iostream>					    // #Pre-processor directive (Input-Output-Stream)
+
+// A template function to implement bubble sort.
+// We can use this for any data type that supports
+// comparison operator < and swap works for it.
+
+template <class T> void bubbleSort(T a[], int size)
+{
+    for (int i = 0; i < size - 1; ++i)
+    {
+        for (int j = size - 1; i < j; --j)
+        {
+            if (a[j] < a[j - 1])
+            {
+                std::swap(a[j], a[j - 1]);
+            }
+                
+        }
+    }
+}
+
+/**/
+
+/*=================================================    End of Declaration    ========================================================*/
+/**/
+
+
+int main(int argc, char* argv[]) {
+
+    /*PracticeCoding1.cpp : This file contains the 'main' function. NOTE: Program execution begins and ends there.*/
+    sayHello();
+    /**/
+
+    // Driver Code
+    int randArr[]{ 2, 8, 6, 11, 34, 23, 78, 45, 36, 52, 64 };
+
+    int n = sizeof(randArr) / sizeof(randArr[0]);
+
+    bubbleSort<int>(randArr, n);
+
+    std::cout << "Sorted array: ";
+    for (int i = 0; i < n; ++i)
+    {
+        std::cout << randArr[i] << " ";
+        std::cout << std::endl;
+    }
+   
+
+    
+  
+
+    /**/
+    std::cout << "\n\n";
+     
+    //sayEnter();
+    //sayThanks();
+    sayExit();
+
+    system("pause>0");
+    return 0;
+}
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
