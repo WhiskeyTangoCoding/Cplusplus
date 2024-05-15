@@ -1,3 +1,13 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - SmartPointers1.cpp | C++ for Beginners
+
+---
+
 // SmartPointers1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
