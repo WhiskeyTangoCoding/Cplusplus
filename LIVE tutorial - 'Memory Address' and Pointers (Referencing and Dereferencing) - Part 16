@@ -1,0 +1,66 @@
+/**/
+/* 'Memory Address' and Pointers (Referencing and Dereferencing)
+
+		Referencing: is used in C++ as a reference declarator in addition to being the address operator.
+		Pointer: is a special type of 'Variable' that has a 'Memory Address' stored as its value.
+
+		-When creating a pointer, use an asterisk (*)
+			*  (Asterisk)  Pointer
+			-Modifying the pointer variable modifies the address it 'points' to
+
+					int target;						// Storing/holding garbage...
+					int *rTarg = &target;			// rTarg is a reference to an integer (memory address). The meanings are related, but not identical.
+
+		-When determining the address of the variable, the ampersand (&)
+			 &  (Ampersand) 'Address-of' Operator 'Memory Address'						-'Memory Address' in Hexadecimal format...
+
+					int i = 6;
+					int* p = &i;		// Best practice 'inline' line code	** Do NOT two line this such as:  int* p;	then	p = &i;
+					*p = 7;				// 'Dereferenced'
+
+		Dereferencing:
+			-When the asterisk is placed in front of the variable name, it's called the 'dereference' operator, which allows us to assign a value and NOT the address.
+			-To modify the value of the data in memory that it points to, we 'dereference'
+			-'Raw' pointers can be very unsafe
+
+				Example RawPointer:
+
+				void UseRawPointer() {		// Using a raw pointer -- not recommended.
+
+				Song* pSong = new Song(L"Nothing on You", L"Bruno Mars");
+
+					// Use pSong...
+
+				delete pSong;				// Don't forget to delete!
+				}
+*/
+
+/**/
+/*	Why use Pointers?
+
+			1) MUST use pointers for inheritance
+					Base* ptr = new Derived();
+
+			2) Pass by value vs. Pass by reference
+					-Modifying variable pass into a function
+
+			3) Pointing to large data
+					-Noting that large data CAN NOT live (on the stack)
+*/
+
+/**/
+/*	What is the difference between smart pointer and raw pointer in C++?
+
+		Unlike raw pointers, smart pointers can prevent memory leaks, dangling pointers, and double free errors, by ensuring that
+			the heap memory they point to is properly allocated and deallocated.
+			There are different types of smart pointers in C++, each with its own semantics and use cases.
+
+	When should I use raw pointers?
+
+		You should use raw pointers when you need to perform low-level operations, interface with foreign functions,
+			or optimize performance-critical code.
+
+		In many cases, pointers may be avoided altogether in C++ by using references, especially when passing function parameters.
+
+		See Microsoft Learn: Raw pointers (C++) and Smart pointers (Modern C++)
+*/
