@@ -1,0 +1,77 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - this Pointer | C++ for Beginners
+
+---
+
+//
+
+#include <iostream>
+ 
+using namespace std;
+
+class Box {
+   public:
+      // Constructor definition
+      Box(double l = 2.0, double b = 2.0, double h = 2.0)		// Default values assigned
+      {
+         std::cout <<"Constructor called." << std::endl;
+         m_length = l;
+         m_breadth = b;
+         m_height = h;
+      }
+
+      double Volume()
+      {
+         return length * breadth * height;
+      }
+
+      int compare(Box box)
+      {
+         return this->Volume() > box.Volume();
+      }
+      
+   private:
+      double m_length;     // Length of a box
+      double m_breadth;    // Breadth of a box
+      double m_height;     // Height of a box
+};
+
+int main(void) {
+
+   Box Box1(3.3, 1.2, 1.5);    // Declare box1
+   Box Box2(8.5, 6.0, 2.0);    // Declare box2
+
+   if(Box1.compare(Box2))
+   {
+      std::cout << "Box2 is smaller than Box1" << std::endl;
+   }
+   else
+   {
+      std::cout << "Box2 is equal to or larger than Box1" << std::endl;
+   }
+   
+   return 0;
+}
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
+
+** When the above code is compiled and executed, it produces the following result −
+
+Constructor called.
+Constructor called.
+Box2 is equal to or larger than Box1
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
