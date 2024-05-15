@@ -1,0 +1,80 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - Inheritance Base or Parent class | C++ for Beginners
+
+---
+
+class Lego
+{
+public:
+    void buyLego()
+    {
+        std::cout << "The parents purchase random Lego playset online for their child" << std::endl;
+    }
+
+    void makeLegoB()
+    {
+        std::cout << "The parent helps son build Lego DC Batmobile Batman vs. The Joker set" << std::endl;
+    }
+
+    void makeLegoG()
+    {
+        std::cout << "The parent helps daughter build Lego Friends Lianns, Leos, and Novas Rooms playset" << std::endl;
+    }
+
+    void superLego()
+    {
+        std::cout << "The dad helps son build LEGO Star Wars 332nd Ahsokka's Clone Trooper Battle pack" << std::endl;
+    }
+};
+
+// Derived or Child class
+class MoreLego : public Lego
+{
+public:
+    void moreLegoB()
+    {
+        std::cout << "The son alone builds Lego Spider-Man Miles Morals vs. Morbius set" << std::endl;
+    }
+
+    void moreLegoG()
+    {
+        std::cout << "The daughter alone builds Lego Friends Igloo Holiday Adventure playset" << std::endl;
+    }
+
+    void superLego()
+    {
+        std::cout << "The children together build LEGO Sonic the Hedgehog Sonic Speed Sphrere Challenge set" << std::endl;
+    }
+};
+
+
+int main()
+{
+
+// Object oriented programming (OOP)
+Lego dad;
+dad.buyLego();
+
+//dad.makeLegoB();
+//dad.makeLegoG();
+//dad.superLego();
+std::cout << std::endl;
+
+MoreLego boy;
+MoreLego girl;
+
+boy.moreLegoB();
+girl.moreLegoG();
+
+}
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
