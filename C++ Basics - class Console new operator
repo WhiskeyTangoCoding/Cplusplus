@@ -1,0 +1,51 @@
+class Console {
+public:							// Access modifier or specifier
+	Console();					// This is a Constructor();
+	~Console();					// This is a ~Destructor();
+
+	Console(string name, string type, short int members) {			// Default Constructor();
+		*itsName = name;
+		*itsType = type;
+		*itsMembers = members;
+	}
+
+	void introPer() {
+		cout << "Name: " << *itsName << endl;
+		cout << "Type: " << *itsType << endl;
+		cout << "Members: " << *itsMembers << endl;
+	}
+
+	// ** Setters and Getters
+	string GetName() const { return *itsName; }
+	void SetName(string name) { *itsName = name; }
+
+	string GetType() const { return *itsType; }
+	void SetType(string type) { *itsType = type; }
+
+	int GetMembers() const { return *itsMembers; }
+	void SetMembers(short int members) { *itsMembers = members; }
+
+private:						// Access modifier or specifier
+	string* itsName;
+	string* itsType;
+	short int* itsMembers;
+};
+
+Console::Console() {			// ClassName::Constructor()
+	cout << "\nSimple Console Constructor activating (on the HEAP)...\n";
+	itsName = new string("WhiskeyTango Coding on YT");
+	itsType = new string("LIVE C++ Coding and Mathematics");
+	itsMembers = new short int(70);
+}
+
+Console::~Console() {
+	cout << "\nSimple Console Destructor deleting (off the HEAP)...\n";
+	delete itsName, itsType, itsMembers;
+}
+
+
+
+	Console* workString = new Console;			// ClassName ObjectName; 'new' operator (on the HEAP)
+
+	workString->introPer();					// ObjectName -> Function();	(void function inside our class)
+	delete[] workString;					// Clearing the memory (off the HEAP)
