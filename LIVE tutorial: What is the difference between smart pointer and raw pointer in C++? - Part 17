@@ -1,0 +1,81 @@
+
+
+/**/
+/*	What is the difference between smart pointer and raw pointer in C++?
+
+		Unlike raw pointers, smart pointers can prevent memory leaks, dangling pointers, and double free errors, by ensuring that
+			the heap memory they point to is properly allocated and deallocated.
+			There are different types of smart pointers in C++, each with its own semantics and use cases.
+
+	When should I use raw pointers?
+
+		You should use raw pointers when you need to perform low-level operations, interface with foreign functions,
+			or optimize performance-critical code.
+
+		In many cases, pointers may be avoided altogether in C++ by using references, especially when passing function parameters.
+
+		See Microsoft Learn: Raw pointers (C++) and Smart pointers (Modern C++)
+*/
+
+/**/
+/*	Define raw pointer in C++
+
+		A pointer is a type of variable. It stores the address of an object in memory, and is used to access that object.
+
+		A raw pointer is a pointer whose lifetime isn't controlled by an encapsulating object, such as a smart pointer.
+			A raw pointer can be assigned the address of another non-pointer variable, or it can be assigned a value of nullptr.
+			A pointer that hasn't been assigned a value contains random data.
+
+		A pointer can also be dereferenced to retrieve the value of the object that it points at.
+			The member access operator provides access to an object's members.
+
+	Why are raw pointers not used in C++?
+
+		The use of raw pointers is not recommended because it's too easy to lose track of them and never release the memory they reference.
+			The result is a memory leak - memory that is acquired but never released.
+			At best, a memory leak turns a running program into a memory hog that consumes a computer's resources.
+
+		Should you ever use raw pointers C++?
+
+			In C++20 and beyond we tend to frown upon raw pointers because they don't clearly communicate resource ownership,
+				making it more difficult to guarantee memory safety.
+				Instead, we prefer smart pointer types like std::unique_ptr and std::shared_ptr,
+				because they clearly communicate how the memory is managed.
+		---
+	** In modern C++, raw pointers are only used in small code blocks of limited scope, loops, or helper functions where performance is critical,
+			and there is no chance of confusion about ownership.
+
+				void UseRawPointer()
+				{
+					// Using a raw pointer -- not recommended.
+					Song* pSong = new Song(L"Nothing on You", L"Bruno Mars");
+
+					// Use pSong...
+
+					// Don't forget to delete!
+					delete pSong;
+				}
+*/
+
+/**/
+/*	Define smart pointer in C++
+
+		A smart pointer is a class template that you declare on the stack, and initialize by using a raw pointer that points to a heap-allocated object.
+			After the smart pointer is initialized, it owns the raw pointer.
+
+		Smart pointers are defined in the std namespace in the <memory> header file.
+			They are crucial to the RAII or Resource Acquisition Is Initialization programming idiom.
+			The main goal of this idiom is to ensure that resource acquisition occurs at the same time that the object is initialized,
+				so that all resources for the object are created and made ready in one line of code.
+
+				void UseSmartPointer()
+				{
+					// Declare a smart pointer on stack and pass it the raw pointer.
+						unique_ptr<Song> song2(new Song(L"Nothing on You", L"Bruno Mars"));
+
+					// Use song2...
+					wstring s = song2->duration_;
+					//...
+
+				} // song2 is deleted automatically here.
+*/
