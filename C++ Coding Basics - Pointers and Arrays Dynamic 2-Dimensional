@@ -1,6 +1,12 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/
 
-  // Intro to Pointers and Arrays Dynamic 2-Dimensional
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - Intro to Pointers and Arrays Dynamic 2-Dimensional | C++ for Beginners
+
+---
 	// What is a Multi-Dimensional 'Dynamic Array'?
 
 	int rows = 3;
@@ -83,3 +89,9 @@ int main ()
 	printArr(arr);
 
 }
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
