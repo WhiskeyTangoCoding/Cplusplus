@@ -1,0 +1,51 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - Introduction to 'Smart Pointers' | C++ for Beginners
+
+---
+#include <iostream>
+#include <memory>
+#include <string>
+
+using std::cout;
+using std::string;
+using std::endl;
+
+
+    /* Introduction to 'Smart Pointers' for Beginners in C++*/
+    // 'Declaration' of a Functon()
+
+        //class
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+int main() {
+
+        /*What are 'Smart Pointers'? They 'De-allocate' memory automatically. Don't have to worry about 'Memory Leaks'. (3) Three types
+        of 'Smart Pointers' in C++ : 1. Unique Pointer 2. Shared Pointer and 3. Weak Pointer. Note that the 'Syntax' is different when
+        compared to 'Raw Pointers'*/
+
+        std::unique_ptr<int> unPtr1 = std::make_unique<int>(35);
+	      std::cout << *unPtr1 << std::endl;				// Recall, 'Pointers' store... (See below)
+
+        system("pause>0");
+        return 0;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+    // 'Definition' of a Function()
+
+    /*The term “Syntax” means an approved set of pre-defined protocols or rules that we need to follow while working in a programming
+      language.
+
+      Recall, 'Pointers' store 'Memory Addresses', and in order to access the value that is stored at that address is to 'De-reference'
+      that 'Pointer' via. an * Asterisk.*/
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
