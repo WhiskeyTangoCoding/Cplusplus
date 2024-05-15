@@ -1,3 +1,13 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Basics - class Console new operator | C++ for Beginners
+
+---
+
 class Console {
 public:							// Access modifier or specifier
 	Console();					// This is a Constructor();
@@ -49,3 +59,9 @@ Console::~Console() {
 
 	workString->introPer();					// ObjectName -> Function();	(void function inside our class)
 	delete[] workString;					// Clearing the memory (off the HEAP)
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
