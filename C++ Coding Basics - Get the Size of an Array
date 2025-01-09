@@ -1,8 +1,8 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-*/
+*/ Developer: WhiskeyTango Coding
 
-/*====================================================    | GENERAL NOTES |    ======================================================*/
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
 
 //--- C++ Coding Basics - Get the Size of an Array | C++ for Beginners
 
@@ -105,6 +105,6 @@ int getMaxNum(int arrFunc[], int size)
 
 ---
 
-/*====================================================    | GENERAL NOTES |    ======================================================*/
+/*=====================================================    | END OF CODE |    =======================================================*/
 
 //
