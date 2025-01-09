@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /*Today's REVIEW: */
 
 /**/
@@ -59,3 +63,9 @@
 	   -Can be hard to read others' code due to custom definitions / OP over-loading
 	   -Compiler/linker errors hard to interpret. More code gring. More errors == learning == Better debugger, I may add.
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
