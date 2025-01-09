@@ -1,0 +1,44 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: LIVE tutorial: There still is a 'bug' w/ in the ostream - Part 26
+
+
+/**/
+/*	There still is a 'bug' w/ in the ostream		**See Tutorial_Erik 00-01 Common input stream issues
+
+		cin.ignore();
+		getline(cin, fullname);
+
+		Prior to adding cin.ignore();, there still is a 'bug' w/ in the ostream....
+			In CONSOLE> Allows user to enter a single word/name for std::cin, but...
+			then entirely skips USer prompt for fullname, and immediately jumps to next lines or ex to exit program.
+			Thus, NOT allowing the USer to enter any further information.
+
+		This is Why? The 'carriage return' from the KB entry is still left in the input [BUFFER]... So, when we "call" the geline() function
+			-it then picks up that left over 'carriage return' remaining in the input [BUFFER].
+
+		** To correct or fix, add in function cin.ignore();
+*/
+
+/**/
+/*	The memory for a <string> is a sequence of consecutive bytes, each holding one character.
+
+			The amount of memory reserved for a string variable is automatically increased or decreased
+			to fit the number of characters stored in the string as the program runs.
+
+		A simple technique to avoid cascading errors is flushing the input stream using the ignore() function.
+			The ignore() function reads and discards characters obtained from input.
+
+		The get() function gets the next character from the input stream. The get() function is overloaded,
+			meaning it can accept a varying number of parameters depending on how it is used.
+*/
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
