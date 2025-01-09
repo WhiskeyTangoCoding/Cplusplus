@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /**/
 /*	Lvalues (lhs) and Rvalues (rhs)
 
@@ -43,3 +47,9 @@
 			// Nullify the temp object's name pointer.
 			temp.name = nullptr;
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
