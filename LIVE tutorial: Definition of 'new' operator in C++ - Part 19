@@ -1,0 +1,50 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: Definition of 'new' operator in C++ - Part 19
+
+/**/
+/*	Definition of 'new' operator in C++		(Storing onto the HEAP)
+
+			The C++ 'new' operator is used to allocate memory from the 'heap' at runtime. If there is enough memory, the 'new' operator initializes
+				the memory, and returns the address of the new allocation, and initializes the block of memory to the variable pointer type.
+
+			** What is the new Operator? - is used to allocate memory 'dynamically' for a variable or an object at (runtime).
+			-This means that the memory is allocated during the execution of the program, as opposed to being allocated at (compile time).
+
+			** Use of the new operator signifies a request for the memory allocation (on the heap). If sufficient memory is available, it initializes
+					the memory and returns its address to the pointer variable.
+
+			** The 'new' operator should ONLY be used if the data object should remain in memory until delete is called. Otherwise, if the 'new' operator
+				is not used, the object is automatically destroyed when it goes out of scope (meaning off the stack).
+
+	** In other words, the objects using 'new' are cleaned up manually (heap) while other objects are automatically cleaned when they go out of scope (stack).
+
+			** Share Example_40-43 When to use 'new' operator...
+				-The 'new' operator is used to initialize the memory (on the heap), and return its address to the pointer variable *ptr1 and *ptr2.
+				-Then the values stored at memory positions pointed to by ptr1 and ptr2 are displayed. Finally the delete operator is used to free the memory.
+*/
+
+
+/**/
+/* What is a 'Memory Leak'?
+
+			-In computer science, a 'memory leak' is a type of resource leak that occurs when a computer program incorrectly manages memory allocations
+				in such a way that memory which is no longer needed is not released.	delete[]
+			-A memory leak may also happen when an object is stored in memory but cannot be accessed by the running code.
+
+			-'delete' is an operator that is used to destroy array and non-array(pointer) objects which are 'dynamically' created by the 'new' operator.
+			-The 'delete' operator destroys the object created with new by deallocating the memory associated with the object.
+			-delete operator works only for objects allocated using operator 'new' (ibm.com).
+
+					int* set = new int[100];
+					//use set[]
+	
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
