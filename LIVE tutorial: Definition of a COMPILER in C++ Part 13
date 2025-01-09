@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /**/
 /* What is Compile Time and Runtime?
 
@@ -46,3 +50,9 @@
 				On the other hand, types in Python are determined during run-time as opposed to compile-time and thus programmers are not required
 				to declare variables before using them in the code.
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
