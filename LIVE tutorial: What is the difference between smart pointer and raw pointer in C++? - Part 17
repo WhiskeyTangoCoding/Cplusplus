@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /**/
 /*	What is the difference between smart pointer and raw pointer in C++?
 
@@ -79,3 +83,9 @@
 
 				} // song2 is deleted automatically here.
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
