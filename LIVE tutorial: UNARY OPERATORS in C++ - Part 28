@@ -1,0 +1,79 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: UNARY OPERATORS in C++ - Part 28
+
+/**/
+/* UNARY Operators...INCREMENT and DECREMENT Operators:
+
+	 * DID you know? C++ got its name by applying the 'increment' operator to the name of its predecessor language: C.
+		 The idea is that C++ is an incremental improvement over C.
+
+	  Let's get into some OPERATORS...
+			 int x = 45;
+
+			  INCREMENT ++ (INCREASE) vs. DECREMENT -- (DECREASE)		Original language C  ->  C++
+			   x = x + 1;					x = x - 1;
+
+			  x++ is teh same as saying   x = x + 1; (condensed version of, less characters)   x += 1;
+			  Slope formula: y = mx + b
+
+			  x++ (post means after)
+				int x = 12;
+				x++;
+				cout << x; (returns output) 12
+				cout << x; (returns output) 13
+			   ---------------------------------
+				++x	(pre means before)
+
+				int x = 12;
+				++x;
+				cout << x; (returns output) 13
+				cout << x; (returns output) 13
+*/
+
+/**/
+/*	Unary Resolution Operator
+
+		The :: (scope resolution) operator is used to qualify hidden names so that you can still use them.
+			You can use the unary scope operator if a namespace scope or global scope name is hidden by an explicit declaration
+			of the same name in a block or class.
+
+		The scope resolution operator's unary form is used to access a variable or object that is at external scope and that has been
+			"hidden" by an identically named variable or object declared at local or class scope. A namespace is a sort of family name
+			that prefixes all the names declared within the namespace.
+
+		Two colons (::) are used in C++ as a scope resolution operator. This operator gives you more freedom in naming your variables
+			by letting you distinguish between variables with the same name.
+*/
+
+/**/
+/*	What is a ternary operator C++?
+
+		Programmers use the ternary operator for decision making in place of longer if and else conditional statements.
+			The ternary operator take three arguments:
+
+			The first is a comparison argument.
+			The second is the result upon a true comparison.
+			The third is the result upon a false comparison.
+
+			Its syntax is:
+			(test condition) ? expression1 : expression2;
+
+				double marks;
+
+				std::cout << "Enter your marks: ";								// take input from users or USER prompt
+				std::cin >> marks;
+
+				std::string result = (marks >= 40) ? "passed" : "failed";		// ternary operator checks if marks is greater than 40
+				std::cout << "You " << result << " the exam.";
+*/
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
