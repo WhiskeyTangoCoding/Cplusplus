@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /**/
 /*DID you know? The 'variable' itself HOLDS or STORES a number value into MEMORY. -> RAM (Random Access Memory) is temporary memory.
 
@@ -47,3 +51,9 @@
 			-The 'temporary' value is copied (assigned) to whichever variable is used in the int main() {body}
 			-The 'temporary' value is no longer needed, so the system discards it.
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
