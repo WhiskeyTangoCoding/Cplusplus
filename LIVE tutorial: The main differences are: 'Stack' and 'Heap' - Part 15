@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /**/
 /*	The main differences are: 'Stack' and 'Heap'
 
@@ -48,3 +52,9 @@
 			binding as linking function definition with the function call. So the term dynamic binding means to select a particular function
 			to run until the runtime.
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
