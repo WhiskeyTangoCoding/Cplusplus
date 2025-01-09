@@ -1,0 +1,70 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: Define static_cast C++ - Part 23
+
+/**/
+/*	Define static_cast C++
+
+		This is the simplest type of cast that can be used. It is a compile-time cast. It does things like implicit conversions between types
+			(such as int to float, or pointer to void*), and it can also call explicit conversion functions.
+
+		static_cast - This is used for the normal/ordinary type conversion. This is also the cast responsible for implicit type coersion and
+			can also be called explicitly. You should use it in cases like converting float to int, char to int, etc.
+*/
+
+/**/
+/*	What is type casting in C++?
+
+		Type casting refers to the conversion of one data type to another in a program. Typecasting can be done in two ways: automatically by the compiler
+			and manually by the programmer or user. Type Casting is also known as Type Conversion.
+
+		Implicit Type Casting:
+			-occurs automatically when the compiler converts a value from one data type to another. This happens when a value is assigned to a variable of a
+			different data type, or when an expression involving different data types is evaluated. For eg. If we assign an integer value to a float variable,
+			the compiler will automatically convert the integer value to a float value.
+
+		-is useful because it simplifies coding and can help avoid errors. However, it can also lead to unexpected behavior and loss of precision.
+
+		Explicit Type Casting:
+			Explicit type casting occurs when the developer manually converts a value from one data type to another.
+			This is done using the cast operator, which is represented by parentheses enclosing the target data type.
+*/
+
+/**/
+/*	What are the three types of cast in C++?
+
+		-static_cast attempts to make one variable type into another using standard conversion functions. ...
+		-dynamic_cast attempts to go from a pointer to one class to a pointer to another in its inheritance tree.
+		-const_cast adds or removes const requirements from a variable...
+
+		Static Cast :
+			The static cast is the most commonly used type of explicit type casting in C++. It is used to convert between related data types,
+				such as integer to float or pointer to the base class to pointer to the derived class.
+				The static cast is also used to perform upcasting and downcasting between class hierarchies.
+
+		Dynamic Cast:
+			The dynamic cast is used to perform downcasting between class hierarchies. It is used when we need to convert a pointer to a
+				base class to a pointer to a derived class.
+				The dynamic cast ensures that the cast is safe by performing a run-time check to ensure that the conversion is valid.
+
+		Reinterpret Cast:
+			The reinterpret cast is used to perform low-level type conversions that are not supported by the other types of explicit type casting.
+				It is used to convert between unrelated data types, such as converting a pointer to an integer or vice versa.
+				The reinterpret cast does not perform any type of checking, and can lead to undefined behavior if used incorrectly.
+
+		Const Cast:
+			The const cast is used to remove or add const qualifiers to a data type. It is used when we need to modify a variable that is declared as const,
+				or when we need to assign a non-const variable to a const variable.
+
+			// See What is Type Casting in Cpp.txt
+*/
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
