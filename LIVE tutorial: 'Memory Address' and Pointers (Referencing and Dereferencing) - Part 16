@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /**/
 /* 'Memory Address' and Pointers (Referencing and Dereferencing)
 
@@ -66,3 +70,9 @@
 
 		See Microsoft Learn: Raw pointers (C++) and Smart pointers (Modern C++)
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
