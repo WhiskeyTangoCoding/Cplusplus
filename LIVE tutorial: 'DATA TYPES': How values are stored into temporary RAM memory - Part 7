@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /**/
 /*'DATA TYPES': How values are stored into temporary RAM memory
 
@@ -71,3 +75,9 @@
 			C++ String push_back()
 			This function is used to add new character ch at the end of the string, increasing its length by one.
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
