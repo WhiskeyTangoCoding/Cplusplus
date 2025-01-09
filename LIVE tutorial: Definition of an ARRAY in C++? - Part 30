@@ -1,0 +1,74 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: Definition of an ARRAY in C++? - Part 30
+
+/**/
+/* Definition of an ARRAY in C++?
+
+		-Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+			-are a collection of elements of the same type placed in contiguous memory locations that can be individually referenced
+			by using an index to a unique identifier.
+
+		 eg. Five values of type int can be declared as an array without having to declare five different variables (each with its own identifier).
+			 ** These entities or elements can be of int, float, char, or double data type or can be of user-defined data types too like structures.
+
+	AS humans, we begin counting at 1... Computers and/or the compiler, it begins counting at ZERO    ie. 0, 1, 2, 3, 4, 5, and so on...
+			** Define the variable type, specify the name of the array followed by square brackets[]
+
+							Array Initializer List								** Curly brackets are used for our List {}
+	 int whiskeyTango[6] = { 2, 7, 9, 22, 45, 68 };
+		Index position     { 0, 1, 2,  3,  4,  5 }
+
+										 [Array Index number]
+	 std::cout << "The value stored in Index position [3] is: " << whiskeyTango[3] << std::endl;
+		---
+			Advantages of Array
+				-It is a better version of storing the data of the same size and same type.
+				-It enables us to collect the number of elements in it.
+				-Arrays have a safer cache positioning that improves performance.
+				-Arrays can represent multiple data items of the same type using a single name.
+
+			Disadvantages Of Array:
+				-In an array, it is essential to identify the number of elements to be stored.
+				-It is a static structure. It means that in an array, the memory size is fixed.
+				-When it comes to insertion and deletion, it is a bit difficult because the elements are stored sequentially
+				 and the shifting operation is expensive.
+*/
+
+/**/
+/*	Breakdown of an ARRAY
+
+			   index position { 0, 1, 2,  3,  4,  5}
+
+	  int whiskeyTango[6] = { 2, 7, 9, 22, 45, 68 };   | |
+							  ^		 ^  ^  ^   ^   ^   ^
+			# of Elements ____|      |__|__|___|___|___|__ These are the "Elements"
+
+			std::cout << whiskeyTango[2] << '\n';
+									  ^
+									  |____ index position
+			___
+
+			std::cout << "Enter the maximun number of Elements ";
+			size_t length;
+			std::cin >> length;
+
+			int* arr{ new int[length] {} };
+			std::cout << "I've just allocated an array of integers of length " << length << '\n';
+
+			arr[0] = 8;
+			delete[] arr;			// Cleaning up the HEAP
+
+			int* whiskeyTango{new int [] {} };
+			delete[] whiskeyTango;
+*/
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
