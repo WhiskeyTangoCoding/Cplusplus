@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /*Version: 17.9.2 C++17*/
 
 // 'Declaration' of a Function() - header.h file:
@@ -45,5 +49,7 @@ int NikoHasNoLife(int& niko)
 }
 
 /**/
+
 /*=================================================    End of Definition    =========================================================*/
+
 // ---																															                                                             --- //
