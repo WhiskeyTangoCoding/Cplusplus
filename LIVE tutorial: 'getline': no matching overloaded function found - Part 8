@@ -1,5 +1,9 @@
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
 /**/
 /*	'getline': no matching overloaded function found C++
 
@@ -28,3 +32,9 @@
 
 				cin.ignore(64, '\n');															                                                    Source: simplecplusplus.wordpress.com
 */
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
