@@ -1,0 +1,68 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: What is bubble sort in C++ - Part 25
+
+/**/
+/*	What is bubble sort in C++
+
+      Bubble sort is a type of sorting algorithm you can use to arrange a set of values in ascending order.
+        If you want, you can also implement bubble sort to sort the values in descending order.
+        A real-world example of a bubble sort algorithm is how the contact list on your phone is sorted in alphabetical order.
+
+		Bubble sort is one of the most straightforward sorting algorithms. In this sorting technique, we begin by comparing the
+			first two elements of the array and checking if the first element is greater than the second element; if it is,
+			we will swap those elements and move forward to the next element.
+
+		This process is repeated until the list is sorted. For instance, if you have a list like this: 5, 3, 8, 4, 2, the
+			Bubble Sort algorithm would start by comparing the first two numbers. Since 5 is greater than 3,
+			it would swap the two numbers. The list would become: 3, 5, 8, 4, 2.
+*/
+
+Source: https://www.geeksforgeeks.org/bubble-sort-algorithm/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// An optimized version of Bubble Sort 
+void bubbleSort(vector<int>& arr) {
+    int n = arr.size();
+    bool swapped;
+  
+    for (int i = 0; i < n - 1; i++) {
+        swapped = false;
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+      
+        // If no two elements were swapped, then break
+        if (!swapped)
+            break;
+    }
+}
+
+// Function to print a vector
+void printVector(const vector<int>& arr) {
+    for (int num : arr)
+        cout << " " << num;
+}
+
+int main() {
+    vector<int> arr = { 64, 34, 25, 12, 22, 11, 90 };
+    bubbleSort(arr);
+    cout << "Sorted array: \n";
+    printVector(arr);
+    return 0;
+}
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
