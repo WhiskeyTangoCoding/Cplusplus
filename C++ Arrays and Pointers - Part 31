@@ -1,0 +1,47 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: C++ Arrays and Pointers - Part 31
+
+/**/
+/*	C++ Arrays and Pointers
+
+			int* arr = new int [3];
+			arr[0] = 5;
+			arr[1] = 10;				// See Learn Microsoft Notes: C Tutorial for Beginners Example_34 Arrays and Pointers Comp4300_modded
+			*(arr+2) = 20;				Here, n = 2
+
+		Equivalent statements
+			// arr[n] = *(arr+n)		// *(arr+n) Taking the pointer adding 'n' to it then dereferencing it. Double whammo line code
+			// n[arr] = *(n+arr)
+									   (arr+n) = &(arr[n])
+		(Address of the 1st Element + n value) = getting the address of using address operator(dereferencing at the nth Element)
+		equals the address of the nth Element
+*/
+
+/**/
+/*	To allocate an ARRAY 'dynamically', we use the array form of 'new' and 'delete' (often called new[] and delete[]):
+
+		std::cout << "USER, please enter a value >= 5: ";		In order to, have a USER enter a value for the size of the ARRAY
+		size_t length{};
+		std::cin >> length;
+
+		int* array{ new int[length] {} };					** Use array 'new'. Note that length does NOT need to be a constant!!
+
+	** Also note that we don't need to set array to nullptr/0 here, bc it's going 'out of scope' immediately after this anyaways.
+		Because, we are allocating an array, C++ knows that it should use the array version of 'new' instead
+		of the scaler version of 'new'.
+
+	size_t in C++ is the type returned by the sizeof operator, and is frequently used in the standard library to describe sizes and counts.
+		It is a type that may express the size of any object in bytes. The maximum size of an object of any type that is technically feasible
+		can be stored in size_t (including array).
+*/
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
