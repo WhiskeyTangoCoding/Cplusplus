@@ -1,0 +1,82 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+#include "ShapeManager.h"
+
+/**/
+/*=======================================================    End Main    ============================================================*/
+
+// 'Definition' of a Type: class - Source code: "Make our Functions()"
+/**/
+
+namespace ShapeManager
+{
+	Rectangle::Rectangle()
+	{
+		// Nothing here...
+	}
+
+	// Default Constructor w/ (Parameter list)
+	Rectangle::Rectangle(int width, int height)
+		: m_itsWidth(width),						// Member Initializer List
+		m_itsHeight(height)
+	{
+		// Nothing here...
+	}
+
+	Rectangle::~Rectangle()
+	{
+		// Nothing here...
+	}
+
+
+	// Accessors - Setters/Getters
+	int Rectangle::GetWidth() const
+	{
+		return m_itsWidth;
+	}
+
+	int Rectangle::GetHeight() const
+	{
+		return m_itsHeight;
+	}
+
+
+
+	// Class method implementations
+	void Rectangle::SetSize(int& newWidth, int& newHeight)
+	{
+		m_itsWidth = newWidth;
+		m_itsHeight = newHeight;
+	}
+
+
+
+	// Helper Methods
+	int Rectangle::CalculatePerim() const
+	{
+		return 2 * (m_itsWidth + m_itsHeight);
+	}
+
+	int Rectangle::CalculateArea() const
+	{
+		return m_itsWidth * m_itsHeight;
+	}
+
+
+
+	// Methods
+	void Rectangle::printShapeProperties() const
+	{
+		std::cout << "Area of Rectangle: " << CalculateArea() << "\n\n";
+		std::cout << "Perimeter of Rectangle: " << CalculatePerim() << '\n';
+	}
+
+	// End of Methods
+	// ---
+}
+
+// End of namespace
+
+/**/
+/*=================================================    End of Definition    =========================================================*/
+// ---														                                                                     --- //
