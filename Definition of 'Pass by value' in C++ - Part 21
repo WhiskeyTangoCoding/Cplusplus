@@ -1,0 +1,62 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: Definition of 'Pass by value' in C++ - Part 21
+
+
+/**/
+/*	Definition of 'Pass by value' in C++
+
+			When you use pass-by-value, the compiler copies the value of an argument in a calling function to a corresponding non-pointer
+				or non-reference parameter in the called function definition. The parameter in the called function is initialized with
+				the value of the passed argument.
+
+			Pass by value means that a "copy" of the actual parameter's value is made in memory, i.e. the caller and callee have two independent
+				variables with the same value. If the callee modifies the parameter value, the effect is not visible to the caller.
+
+			Pass by value: The method parameter values are copied to another variable and then the copied object is passed to the method. The method uses the copy.
+		The difference: 'pass-by-vbalue' modifications made to arguments passed in by value in the called function can not affect the calling function.
+
+				void testTennify(int a) { a = 10; }		** See C Tutorial Code Example_56 COMP4300 Pass by Value Dave C Game Programming
+*/
+
+
+/**/
+/*	What is 'Pass by Reference' in C++?
+
+		Pass-by-reference means to pass the reference of an argument in the calling function to the corresponding formal parameter of the called function.
+
+		Pass-by-reference means to pass the reference of an argument in the calling function to the corresponding formal parameter
+			of the called function. The called function can modify the value of the argument by using its reference passed in.
+			The following example shows how arguments are passed by reference.
+
+		Pass by reference: An alias or reference to the actual parameter is passed to the method. The method accesses the actual parameter.
+
+		The difference: 'pass-by-reference' modifications made to arguments passed in by reference in the called function have effect in the calling function.
+		** We can use *pointers to accomplish PbR, but ideally we want to use &references (safer)
+
+				void testTennify(int &a) { a = 10; }		** See C Tutorial Code Example_58 COMP4300 Pass by Reference Dave C Game Programming
+*/
+
+/**/
+/*	Pass by Reference exceptions:
+
+		Pass primitive data types by value				Why are you passing integers by const reference?
+		int add(const int a, const int b);				** DON'T DO THIS: int add(const int &a, const int &b);
+
+		Note (int a, int b) here are a copies			Why use const here? Answer: If I don't want a to be modified, const will protect it form being modified.
+
+	** Referencing has an extra 'dereference' step which is slower when using primitives, so just pass primitives by value.
+
+		Pass std::shared_ptr<T> by value
+			-Copy constructor does counter increase/decrease
+*/
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
