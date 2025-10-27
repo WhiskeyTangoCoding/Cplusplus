@@ -1,0 +1,122 @@
+// WhiskeyTangoYT.cpp : This is a 'Single-line' comment.
+/*An introduction to 'WhiskyTango' Coding for Beginners C++ Language. Learning for FUN !! This is also a 'Multi-line' comment*/
+
+/*Version: 17.9.6 C++17*/
+
+#define _USE_MATH_DEFINES					// #header files
+//#define BUFFER 512						// This is a macro
+#include <iostream>							// #Pre-processor directive (Input-Output-Stream) Standard Library
+#include <cmath>
+//#include <complex>
+//#include <string>							// String "is aka. an ARRAY of characters" (String literal)
+#include<vector>
+//#include <map>
+
+//using namespace std;						// From the C Standard Library-packages (Being used at the Global level)
+//cppreference.com
+
+/*===============================================    Code Referencing Above    ======================================================*/
+
+// 'Declaration' of a Function() - header.h file:
+/**/
+
+//template <class identifier> function_declaration;
+//template <typename identifier> function_declaration;
+
+
+
+
+void sayHello();
+void sayMud();					// These are 'Function() Prototypes'. This is also the section where we place our...
+void saySocials();
+void sayExit();					// Struct, Classes, Function() Prototypes, and any 'Variable' declarations.	
+
+/**/
+/*=================================================    End of Declaration    ========================================================*/
+
+/**/
+
+int main(int argc, char* argv[]) {
+
+	/*'Multi-line' comment: 'WhiskeyTango Coding' -> C++ line writing for FUN with MUSIC !!*/
+	sayHello();
+	std::cout << "\n\n";
+	// ---
+
+	// Vectors
+
+	std::vector<int> hector = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 };
+
+	// to access the 2nd Element, you MUST use [e - 1]
+
+	/*for (int i = 0; i < hector.size(); ++i)
+	{
+		std::cout << hector[i] << " ";
+	}*/
+
+	std::cout << std::endl;
+
+	/*for (auto itr = hector.begin(); itr != hector.end(); ++itr)
+	{
+		std::cout << *itr << " ";
+	}*/
+
+	for (std::vector<int>::iterator itr = hector.begin(); itr != hector.end(); ++itr)
+	{
+		std::cout << *itr << " ";
+	}
+
+	std::cout << hector.size() << std::endl;
+	std::cout << hector.capacity() << std::endl;
+
+
+
+
+
+
+
+
+
+	std::cout << "\n\n";
+	// ---	
+	sayMud();					// "Calling our Function()" aka. "Invoking your Function()"
+	saySocials();
+	sayExit();
+
+	system("pause>0");
+	return 0;
+}						// End of PROGRAM... Out of S C O P E -> LIFO 'Deallocation' of memory off the stack.
+
+/**/
+/*=======================================================    End Main    ============================================================*/
+
+// 'Definition' of a Function() - Source code: "Make our Functions()"
+/**/
+
+
+
+void sayHello()
+{
+	std::cout << "Hello World !! THANK YOU for stopping by, watching, and willing to learn C++ line coding from the Basics...";
+	std::cout << "\nTry calling Pizza Hut just to ask for Domino's phone number...\n\n";
+}
+
+void sayMud()
+{
+	std::cout << "\n'Clear as mud?, I certainly hope so... haha Let's GO!! ^^";
+}
+
+void saySocials()
+{
+	std::cout << "\nGeneral coding in C++ Language. YT: WhiskeyTango Coding. Social: (X) aka.Twitter: @TangoDownJohnny\n";
+}
+
+void sayExit()
+{
+	std::cout << '\n';
+	std::cout << "TYPE  ex  to EXIT this console-program... ";
+}
+
+/**/
+/*=================================================    End of Definition    =========================================================*/
+// ---																															                                                             --- //
