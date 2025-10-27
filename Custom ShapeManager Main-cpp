@@ -1,0 +1,180 @@
+// ReviewListing.cpp : This is a 'Single-line' comment.
+/*An introduction to 'WhiskyTango' Coding for Beginners C++ Language. Learning for KNOWLEDGE !! This is also a 'Multi-line' comment*/
+
+/**/
+/* Application Language: C++ [Version: ISO C++17 Standard(/ std:c++17)]*/
+
+#include <iostream>						    // #Pre-processor directive (Input-Output-Stream) Standard Library
+
+#include "ShapeManager.h"
+
+using namespace ShapeManager;
+
+/*===============================================    Code Referencing Above    ======================================================*/
+
+// 'Declaration' of a Function() - header.h file:
+/**/
+
+// GLOBAL variable(s) on a global level for... int main() {}
+enum CHOICE
+{
+	DrawRect = 1,
+	GetArea,
+	GetPerim,
+	ChangeDimensions,
+	Quit
+};
+
+static int printMenu();
+void DoDrawRect(Rectangle);
+void DoGetArea(Rectangle);
+void DoGetPerim(Rectangle);
+
+
+inline void printLineSeparator();
+static void sayExit(const char*);
+
+/**/
+/*=================================================    End of Declaration    ========================================================*/
+
+/**/
+
+int main()									// is a SPECIAL case type of Function();
+{
+	/*'Multi-line' comment: 'WhiskeyTango Coding' -> C++ line writing and Medieval Dream MUSIC !!*/
+	/**/ 
+
+
+	// Local variable(s) local to... int main() {}		"On the Stack" variable (refers to memory)
+	int whardcode = 30;
+	int hhardcode = 5;
+
+	int choice = DrawRect;
+	int fQuit = false;
+
+
+
+	// Empty Scope {}
+	{
+		std::cout << "\nAdded Scope\n{\n\n";
+		// Today's Lecture stream:  Description: Week in Review listing
+
+		// Stack-allocated object(s)  and/or  variable(s)
+		Rectangle theRect(30, 5);
+
+		// FOR TESTING !!
+		//theRect.printShapeProperties();
+
+
+		while (!fQuit)
+		{
+			choice = printMenu();
+
+			if (choice < DrawRect || choice > Quit)
+			{
+				std::cout << "\nInvalid Choice, try again! \n\n";
+				continue;
+			}
+
+			switch (choice)
+			{
+			case DrawRect: DoDrawRect(theRect); break;
+
+			case GetArea: DoGetArea(theRect); break;
+
+			case GetPerim: DoGetPerim(theRect); break;
+
+			case ChangeDimensions: { int newWidth{}, newLength{};
+
+								 std::cout << "\nNew Width: ";
+								 std::cin >> newWidth;
+								 std::cout << "\nNew Height: ";
+								 std::cin >> newLength;
+
+								 theRect.SetSize(newWidth, newLength);
+								 DoDrawRect(theRect); break; }
+
+			case Quit: fQuit = true;
+
+				std::cout << "\nExiting application..." << std::endl << std::endl;
+				break;
+			}
+		}
+
+		std::cout << "\n\n}\n";
+	}
+	// End of Scope
+
+	/**/
+	sayExit("TYPE  ex  to EXIT this console-application...");
+	std::cout << std::endl;						// Cleaning the buffer
+
+
+	// Clean up and exit program
+	system("pause>nul");
+	return 0;
+
+}							// End of PROGRAM... Out of S C O P E -> LIFO 'Deallocation' of memory (off the stack).
+
+/**/
+/*=======================================================    End Main    ============================================================*/
+
+// 'Definition' of a Function() - Source code: "Make our Functions()"
+/**/
+
+int printMenu()
+{
+	int choice{};
+
+	std::cout << "\n\n";
+	std::cout << "*===================  Menu  ============================*\n";
+	std::cout << "[1] Draw Rectangle\n";
+	std::cout << "[2] Calculate Area\n";
+	std::cout << "[3] Calculate Perimeter\n";
+	std::cout << "[4] Resize Shape\n";
+	std::cout << "[5] Quit Program" << std::endl;
+	std::cout << "*=================  Menu End  ===========================*\n";
+
+	std::cin >> choice;
+	return choice;
+}
+
+void DoDrawRect(Rectangle therect)
+{
+	int height = therect.GetHeight();
+	int width = therect.GetWidth();
+
+	for (int i = 0; i < height; ++i)
+	{
+		for (int j = 0; j < width; ++j)
+		{
+			std::cout << "*";
+		}
+		std::cout << '\n';
+	}
+}
+
+void DoGetArea(Rectangle therect)
+{
+	std::cout << "Area: " << therect.CalculateArea() << std::endl;
+}
+
+void DoGetPerim(Rectangle therect)
+{
+	std::cout << "Perimeter: " << therect.CalculatePerim() << std::endl;
+}
+
+void printLineSeparator()
+{
+	std::cout << "--------------------------------------------------------------------------------------\n";
+}
+
+void sayExit(const char* exitm)
+{
+	printLineSeparator();
+	std::cout << exitm << " ";
+}
+
+/**/
+/*=================================================    End of Definition    =========================================================*/
+// ---																															 --- //
