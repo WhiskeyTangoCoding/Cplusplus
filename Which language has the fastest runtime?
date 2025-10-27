@@ -1,0 +1,70 @@
+/**/
+/*	Which language has the fastest runtime?
+
+		Why is C++ the fastest language? One of the most important factors to consider when ranking programming languages is 'speed'.
+			-is the fastest language according to several measures, including 'compilation time' and 'execution speed'.
+	        -gets compiled directly into machine code (Binary 0's and 1's). Its layers (Hence, computations) are directly proportional to the processor.
+
+	 C++ is a language that uses a compiler, not to mention it is a much 'lower-level' programming language than C#, Java, Python, etc.
+			-For eg. Python takes 25 times more time to run the same algorithm compared to C++.
+*/
+
+/**/
+/* Is C++ language a 'Backend' or 'Frontend' programming language?
+
+	   Backend: C++ is one of the most popular backend programming languages. Its features provide many advantages for building robust backend functionalities.
+	   Its scalability and cross-platform compatibility, for instance, make it an ideal choice for developing complex applications that run across multiple platforms.
+*/
+
+/**/
+/*	Is learning C++ enough for game development?
+
+	C++ is often preferred for game development over other languages due to several reasons:
+		1. Performance: C++ is a low-level language that offers a high degree of control over hardware resources.
+		   This is crucial for game development, where performance is essential for smooth gameplay and graphics rendering.
+*/
+
+/**/
+/* What is an API in programming?
+
+	Many people ask themselves, "What is an API?" API is the acronym for application programming interface — a software intermediary
+		that allows two applications to talk to each other. APIs are an accessible way to extract and share data within and across
+		organizations. APIs are all around us.
+
+	Is an API just code?
+
+		An application programming interface (API) is code that enables two software programs to communicate. An API defines how a
+			developer should request services from an operating system (OS) or other application, and expose data within different
+			contexts and across multiple channels.
+*/
+
+/**/
+/*	VS: Solution     Configuration		  Solution Platforms	(platforms you're targeting your code to USers)
+
+		  Debug					 x64			          (64-bit O/S)
+									   x86			          (32-bit O/S) - Win32
+*/
+
+/**/
+/*	What is BitLocker useful for?
+
+	-BitLocker Drive Encryption is an integral security feature for Windows computers. It provides protection for your computer's operating system
+		as well as the data stored it, ensuring that the data remains encrypted even if the computer is tampered with when the operating system is not running.
+	-BitLocker enables users to encrypt everything on the drive Windows is installed on, protecting that data from theft or unauthorized access.
+*/
+
+/**/
+/*	What Is Big Data?
+
+		Big data refers to extremely large and diverse collections of structured, unstructured, and semi-structured data that continues to
+			grow exponentially over time. These datasets are so huge and complex in volume, velocity, and variety, that traditional data management
+			systems cannot store, process, and analyze them.
+
+		Put simply, big data is larger, more complex data sets, especially from new data sources. These data sets are so voluminous that traditional
+			data processing software just can't manage them.
+
+		Do I need coding for big data?
+
+			As an initial step to learning big data, you should be thorough with Programming languages like Python and Java. It would be best if you
+				understood data analysis, database management systems, mathematical concepts, and the basics of cloud computing.
+*/
