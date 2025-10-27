@@ -1,0 +1,66 @@
+/**/
+/*	Definition of ASCII in Computer Science
+*
+	ASCII (American Standard Code for Information Interchange) is the most common character encoding format for text data in computers and on the internet.
+		In standard ASCII-encoded data, there are unique values for 128 alphabetic, numeric or special additional characters and control codes.
+
+	ASCII, a standard data-encoding format for electronic communication between computers. ASCII assigns standard numeric values to letters, numerals,
+		punctuation marks, and other characters used in computers. The ASCII system translates alphanumeric characters and symbols into a computer-readable code.
+
+	Scientific definitions for ASCII:
+		The ASCII table contains letters, numbers, control characters, and other symbols. Each character is assigned a unique 7-bit code.
+		A code that assigns the numbers 0 through 127 to the letters of the alphabet, the digits 0 through 9, punctuation marks, and certain other characters.
+		For example, the capital letter A is coded as 65 (binary 1000 001).
+*/
+
+/**/
+/*	C++ Standard Library
+
+		   -Collection of classes and functions available within the language
+		   -Example functionality
+			   -Strings / IO / Streams / Files
+			   -Generic containers (vector, set, map)
+			   -Container functionality (fill, copy, erase)
+			   -Algorithms (sort, min./max.)
+
+		   MUST #include in your C++ program
+				-Referenced via. the std:: namespace
+				-Namespaces encapsulate code
+					ie. namespace bob { int ivar = 10; }
+					Outside usage: bob::ivar
+				-Standard library examples:
+					std::string, std::vector, std::map
+*/
+
+/**/
+/*  STL (Standard Template Library)
+
+		Containers: classes that store data and imposes some organization on it
+		Iterators: like pointers; mechanisms for accessing elements in a container
+*/
+
+/**/
+/* Containers
+
+	Two types of container classes in STL (Standard Template Library)
+
+		- SEQUENCE containers: organize and access data sequentially, as in an Array. These include
+			vector, dequeue, and list
+
+		- ASSOCIATIVE containers: use 'keys' to allow data elements to be quickly accessed. These include
+			set, multiset, map, and multimap
+*/
+
+/**/
+/*  Algorithms
+
+		STL contains algorithms implemented as function templates to perform operations on containers
+		-requires #include <algorithm> header file
+
+		Algorithm includes:
+			-binary_search      -count
+			-for_each           -find
+			-find_if            -max_element
+			-min_element        -random_shuffle
+			-sort               and more...
+*/
