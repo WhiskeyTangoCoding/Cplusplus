@@ -1,0 +1,58 @@
+#pragma once						// Header Guard
+
+#include <iostream>
+
+// ---	
+/*===============================================    Code Referencing Above    ======================================================*/
+
+// 'Declaration' of a Type: class - header.h file:
+/**/
+
+namespace ShapeManager
+{
+	class Rectangle
+	{
+	public:
+		// public
+		Rectangle();
+
+		// Default Constructor w/ (Parameter list)
+		Rectangle(int, int);
+
+		// Destructor
+		~Rectangle();
+
+
+
+		// Accessors - Setters/Getters
+		int GetWidth() const;
+		int GetHeight() const;
+
+		// Class method implementations
+		void SetSize(int&, int&);
+
+
+
+		// Helper Methods
+		int CalculatePerim() const;
+		int CalculateArea() const;
+
+
+
+		// Methods
+		void printShapeProperties() const;
+
+
+
+	private:
+		int m_itsWidth{};
+		int m_itsHeight{};
+	};
+
+	/* End of Struct */
+}
+
+/**/
+/*=================================================    End of Declaration    ========================================================*/
+
+/**/
