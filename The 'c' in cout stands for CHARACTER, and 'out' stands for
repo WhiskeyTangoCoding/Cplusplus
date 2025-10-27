@@ -1,0 +1,49 @@
+/**/
+/*	int main(int argc, char* argv[]) {}
+
+			argc = number of program args (or arguments)
+			argv = array of string (char*) args					Similar to Java's main(string args[])
+
+	** Note: that a Raw C++ Array pointer doesn't know its own length.
+			Therefore, we've got to "pass in" the Array itself (char* argv[]) plus the length (int argc) of said Array
+			If used, this just processes command line arguments...
+*/
+
+/**/
+/*	DID you know? std::cout in C++ is used to display output to the screen. The 'c' in cout stands for CHARACTER, and 'out' stands for OUTPUT.
+	   Thus, 'cout' refers to character output. For ease of understanding, others may think or reference it in their mind as 'console out'.
+
+			   std::cout				is the STANDARD OUTPUT STREAM		aka. Write operator
+			   std::cin					is the STANDARD INPUT STREAM		aka. istream, or input stream
+			   std::cout <<				is the STREAM INSERTION OPERATOR
+			   std::cin >>				is the STREAM EXTRACTION OPERATOR
+			   std::cout << " ABC "		is a STRING THINK? (for TEXT)...	string	varName
+
+			   cout << "\n\n";						// This is NOW a DOUBLE | NEW | line.				\n = new line literal
+
+	   ** Behind the scenes: << is simply just an 'over-loaded' operator. For eg. It 'pipes' a string to std::cout
+		   Operators are also just functions...
+
+	   ** In C++, the  ::  is called the 'Binary Scope Resolution Operator'. It makes it clear to which namespace or class a symbol belongs to.
+			   ie: Also, is used when creating Classes... ie. ClassName::FunctionName();
+
+	   C++ Whitespace		For the most part - it doesn't matter. Use all the Whitespace you need or require!
+							   Be limited though! In other words, don't go too crazy w/ the Whitespace when line coding.
+*/
+
+/**/
+/*	C++ Indentation / Braces - style and variants
+
+		   ** Note that when you get hired by a company - you have to conform to their style. NEVER mix styles.
+
+			   while (x == y) {			// K & R style and variants (1TBS, Stroustrup, Linux kernel, BSD KNF)
+				   something();			   Standard style w/ Java, JavaScript
+				   somethingelse();
+			   }
+
+			   while (x == y)				// Allman style
+			   {
+				   something();
+				   somethingelse();
+			   }
+*/
