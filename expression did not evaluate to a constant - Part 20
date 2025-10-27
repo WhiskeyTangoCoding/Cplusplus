@@ -1,0 +1,40 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: expression did not evaluate to a constant - Part 20
+
+
+/**/
+/*	expression did not evaluate to a constant	(Variable Length Array)
+
+		short int imarr[n];			Because, it is a 'Variable Length Array' (VLA), and is not standard in C++.
+		And, is not a constant value - in other words, its value is NOT known at compile time.
+
+			 Some compilers like GCC allow them as an extension, but MSVS (Microsoft Visual Studio) will NOT compile them (VLA's).
+				-(VLA) Definition: In computer programming, a 'variable-length array', also called variable-sized or runtime-sized,
+				-is an array data structure whose length is determined at run time (instead of at compile time).
+
+			** (On the stack) In computer programming, an 'automatic variable' is a local variable which is 'allocated and deallocated' automatically
+				when program flow enters and leaves the variable's scope. The variables allocated are called 'stack variables' or 'automatic variables'.
+
+			** (On the heap) When you want to allocate memory, and don't know the value until run time, you need to use 'dynamic memory allocation'.
+			This is done in C++ with the operator 'new'. The memory you allocate yourself with 'new' also needs to be freed with delete or delete[].
+				IMPORTANT !! Don't forget to call delete [] imarr; before the function returns, or you will have a 'memory leak'.
+
+			**VLAs can also be dynamically allocated (on the heap), and internally accessed using a *pointer to this block.
+
+			// USHORT n = 6;															          int a[5];					// stack
+			USHORT imarr[n];					// Original line code					int* ha = new int[5];		// heap
+			USHORT* imarr = new USHORT[n];												  ha[3] = 10;					// @index position 3 store the value of 10
+			cout << imarr[0];
+			delete[] imarr;
+*/
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
