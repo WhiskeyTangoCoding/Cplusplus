@@ -1,0 +1,57 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//--- C++ Coding Basics - Variable swap Recursion int Function | C++ for Beginners
+
+---
+
+//
+
+int sumRecursion(int m, int n)
+{
+	if (m == n)
+	{
+		return m;
+	}
+	return m + sumRecursion(m + 1, n);
+}
+
+/**/
+/*=================================================    End of Declaration    ========================================================*/
+
+/**/
+
+int m{}, n{};
+
+std::cout << "USer please enter a positive integer: ";
+std::cin >> m;
+
+std::cout << "USer please enter another positive integer: ";
+std::cin >> n;
+
+	if(m > n)
+	{
+		m = m + n;
+		n = m - n;
+		m = m - n;
+		std::cout << "\nm:  " << m << ", " << "n: " << n;
+	}
+	else (m < n);
+
+/*int totalSum{};
+
+for(int i = m; i <= n; i++)
+{
+	totalSum += i;
+}*/
+
+std::cout << "\nTotal sum is: " << sumRecursion(m, n);
+
+---
+
+/*====================================================    | GENERAL NOTES |    ======================================================*/
+
+//
