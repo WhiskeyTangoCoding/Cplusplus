@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @WhiskeyTangoCoding
 - Educated. Titled CET, NSA/IT. C++ C# XAML Coder. Teaching. LIVE Streamer. Martial Artist. Pro-Forces. All military.❤️ Women. Proud Dad. My boY!! Let's GO!!
 - 
-- Triple Degrees: Eng. Design & Drafting (College degree). IT/Network Systems Administrator (College degree). 
+- Degrees: Eng. Design & Drafting (College degree). IT/Network Systems Administrator (College degree). 
 - Self-taught coder. Self-Learner. Self-Motivator.           C# Software Developer (Microsoft certification)
 - 
 - Determination. Dedication. Commitment. Satisfaction.
