@@ -1,0 +1,59 @@
+/*Today's REVIEW: */
+
+/**/
+/* Until you learn these 3 things = You will struggle to write code. (Tech w/ Tim)
+
+	   1) Syntax & Program Structure
+		   - You need to understand: How your language works C C++ C# JAvaScript Python
+		   - You need to have the fundamentals down
+		   - How to write basic code (proper format & syntax usages)
+		   - Essentually, Have all the tools & languages necessary to be able to solve a specific problem.
+	   2) Good debugger
+		   - More effective and you progress a lot faster when you DON'T get frustrated...
+		   - Do NOT allow yourself to get discouraged, leading to depression & demotivation
+		   - Take a break from it, have a breather, allow yourself time to think - It will eventually come to YOU.
+		   - Past the frustration. Problem recognized. You will truly see yourself advance as a Developer and/or Programmer.
+	   3) Plan before you code
+		   - Brainstorm. Break-it down. MAke a list, flow chart, or diagram of your program.
+		   - Spend time before you write any code and break your problem down into smaller tasks that are easy to
+			 understand and that can be implemented one at a time. (Tip: Comment out lines & test parts of your code.)
+		   -> Careers: Frontend Development, Backend Development, Software DevOps
+
+		 ** Be CONSISTENT !! Follow the format of coding, and use the appropriate/applicable 'syntax' (in their correct location) while line coding.
+*/
+
+/**/
+/*	Some history of C++ programming language			(Computer Science C++ course COMP4300 - Dave Churchill)
+
+		-Created by Bjarne Stroustrup, Bell labs
+		-Originally called, "C w/ Classes' C++ (1983)
+		-First appeared in 1985
+		-C++98 - First Standardized Version
+		-C++11 - Many new features / QOL
+		-More versions: C++14, C++17, C++20
+		-Precedural "superset of C" (w/ exceptions) Basically, the jist of it is: Anything you can do in 'C' can also be done in C++.
+		-Supports OOP (Object-oriented programming) plus Classes, Inheritance and generics such as vectors, templates, etc.
+		-Maintains the efficiency of 'C'
+		-Very popular in video game development
+		-Influenced development of C# and Java
+*/
+
+/**/
+/*	Advantages of C++
+
+		-Very widely used / supported
+		-Many libraries available
+		-Resulting code is very fast albeit the code is properly programmed
+		-Syntax is similar to Java/JavaScript/other languages
+		-C++ programmers get 'hired', if you can program in C++ you can program in Python
+		-Code is highly customizable ie. operator-overloading, defining, etc.
+		-C++ will be around for a long, long time... It's going nowhere.
+
+	Disadvantages of C++
+
+	   -Easy to write unsafe code/crashes
+	   -Must manage your own memory. It's NOT a 'garbage-collective' language
+	   -Syntax can be a little confusing, only bc it's not a 'dumbed-down' language...
+	   -Can be hard to read others' code due to custom definitions / OP over-loading
+	   -Compiler/linker errors hard to interpret. More code gring. More errors == learning == Better debugger, I may add.
+*/
