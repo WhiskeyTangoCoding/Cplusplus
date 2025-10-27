@@ -5,7 +5,7 @@
 - Self-taught coder. Self-Learner. Self-Motivator.           C# Software Developer (Microsoft certification)
 - 
 - Determination. Dedication. Commitment. Satisfaction.
-- "I strive to Desire - I desire to Strive"
+- "I do... because I can."
 - 
 - 👀 I’m interested in ... Programming and Design of Windows applications
 - 🆚 I’m currently driving code in ... C++  C# WinForms WPF XAML   (.NET Framework)
@@ -15,11 +15,10 @@
 - ▶️ GET CONNECTED:
 - 🐦 Socials X (formerly Twitter) ... Twitter: Johnny TangoDown ✝︎
 - 📷 Socials ... Instagram: johnnytango69
-- 🎥 Socials ... YT: WhiskeyTango Coding
+- 🎥 Socials ... YT: Bologna&Weiners Coding
+- // --- Formerly: WhiskeyTango Sharp -- //
 
 - ➡️ JOIN THE DISCORD: Tigers Brawl
-
-- 😄 Pronouns: ... Guy Dude MAN and Hey YOU?
 - 
 - ⚡ Fun fact: ... “The elevator to success is out of order. You’ll have to use the stairs, one step at a time.” — Joe Girard"  ¯\_(ツ)_/¯
 - ⚡ Fun fact: "The worst part of COFFEE... is AN empty cup !!"
