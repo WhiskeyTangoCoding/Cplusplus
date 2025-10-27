@@ -1,0 +1,125 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+*/ Developer: WhiskeyTango Coding
+
+/*=================================================    | PROJECT INTELLIGENCE |    ==================================================*/
+
+//--- LIVE tutorial: Function template notes - Part 24
+
+/**/
+/*  Function template notes
+
+		-A function template is a pattern
+		-No acutual code is generated until the function names in the template is "called"
+		-A function template uses NO memory
+		-When passing a class object to a function template, ensure that all operatorrs in the template
+			are 'defined' or overloaded in the class definition
+*/
+
+/**/
+/*	Definition of template <typename T> in C++
+
+		A template is a simple yet very powerful tool in C++. The simple idea is to pass the data type as a parameter so that we don't need
+			to write the same code for different data types.
+
+		Templates in C++ is an interesting feature that is used for generic programming and templates in C++ is defined as a blueprint or
+			formula for creating a generic class or a function. Simply put, you can create a single function or single class to work with
+			different data types using templates.
+
+		A code template is an outline of code that can be reused. Typically, templates are used for functions that are routine,
+			such as retrieving data from a data source. ie. Big data
+
+		// See Notepad document: Static cast operator and Template
+*/
+
+STATIC_CAST
+
+// A) The static_cast operator (C++ only)
+
+int j = 41;
+int v = 4;
+float m = j / v;
+
+float d = static_cast<float>(j) / v;
+std::cout << "m = " << m << std::endl;
+std::cout << "d = " << d << std::endl;
+
+
+//B) Below is the C++ program to implement static_cast:
+float f = 3.5;
+
+// Implicit type case
+// float to int
+int a = f;
+std::cout << "The Value of a: " << a;
+
+
+// using static_cast for float to int
+int b = static_cast<int>(f);
+std::cout << "\nThe Value of b: " << b;
+
+// C) The behavior of static_cast for Different Scenarios
+//static_cast for primitive data type pointers:
+int a = 10;
+char c = 'a';
+
+// Pass at compile time, 
+// may fail at run time
+int* q = (int*)&c;
+int* p = static_cast<int*>(&c);
+
+/*  'static_cast': cannot convert from 'char *' to 'int *'
+
+Explanation: This means that even if you think you can somehow typecast a particular object pointer into another but it’s
+        illegal, the static_cast will not allow you to do this.
+*/
+---
+
+
+TEMPLATES
+---
+// D)
+template <typename T>
+T myMax(T x, T y)
+{
+	return (x > y)? x: y;
+
+}
+
+// Example: Compiler internally generates code
+char myMax(char x, char y)
+{
+	return (x > y)? x: y;
+}	// ** Note: Same as for int
+
+
+int main ()
+{
+	std::cout << myMax<int>(5, 9) << std::endl;		// template argument supplied explicitly
+	std::cout << myMax<char>('m', 'e') << std::endl;
+}
+
+
+// E) One function works for all data types.  This would work
+// even for user defined types if operator '>' is overloaded
+
+template <typename T> T myMax(T x, T y)
+{
+    return (x > y) ? x : y;
+}
+
+int main () {}
+// Call myMax for int
+    std::cout << myMax<int>(3, 7) << std::endl;
+
+    // call myMax for double
+    std::cout << myMax<double>(3.0, 7.0) << std::endl;
+
+    // call myMax for char
+    std::cout << myMax<char>('g', 'e') << std::endl;
+
+---
+
+/*=====================================================    | END OF NOTES |    ======================================================*/
+
+//
