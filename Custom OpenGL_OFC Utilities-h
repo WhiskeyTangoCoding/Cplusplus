@@ -1,0 +1,39 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+#ifndef UTILITIES_H				// Check if UTILITIES_H	is not defined
+#define UTILITIES_H				// Define UTILITIES_H to prevent multiple inclusions
+
+#include <string>
+#include <fstream>
+
+// ---	
+/*===============================================    Code Referencing Above    ======================================================*/
+
+// HEADER FILE: 'Declaration' / Definition' of a Function() - header.h file: / Source code: respectively
+/**/
+
+#ifdef _DEBUG
+// To write messages to a file
+static void write_to_log(const char inputLog[512], const char* filemsg)
+{
+	std::ofstream wxLog;
+	wxLog.open("logdebug.txt", std::ofstream::app | std::ofstream::out);
+	wxLog << inputLog << " ";
+	wxLog << filemsg;
+	wxLog.close();
+}
+#else
+static void write_to_log(const char* filemsg)
+{
+	// Nothing here...
+}
+#endif // !_DEBUG
+
+
+// ---
+#endif // !UTILITIES_H
+
+/**/
+/*=================================================    End of Declaration    ========================================================*/
+
+/**/
