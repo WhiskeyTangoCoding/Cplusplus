@@ -1,0 +1,288 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+/* Draw POINTS on a screen * /
+
+// OpenGL_CTT.cpp : Current configuration: Debug     Architecture: x64
+/* Project Title: Code, Tech, and Tutorials/opengl-tutorials/OpenGL Part 1*/
+
+/**/
+/* Application Language: C++ [Version: ISO C++17 Standard(/ std:c++17)]*/
+
+#include <cstdlib>
+
+#define GLAD_GL_IMPLEMENTATION			// ** Be sure to include GLAD before GLFW.
+#include <glad/glad.h>
+
+#define GLFW_INCLUDE_NONE			// GLFW (include after glad)
+#include <GLFW/glfw3.h>
+
+#include "Callbacks.h"
+#include "Utilities.h"
+#include "SurfaceManager.h"			// public variables - Boiler plate code
+
+// ---	
+/*===============================================    Code Referencing Above    ======================================================*/
+
+// 'Declaration' of a Vertex-Fragment SHADERS - header.h file:
+/**/
+
+// Define a vertex/fragment shader - No default vertex/fragment shaders on the GPU.
+
+// Vertex Shader source code
+constexpr auto vertexShaderSource = R"(
+	#version 330 core
+	layout (location = 0) in vec3 aPos;
+
+	void main()
+	{
+		gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);
+	}
+
+)";
+
+//Fragment Shader source code
+constexpr auto fragmentShaderSource = R"(
+	#version 330 core
+	out vec4 FragColor;
+
+	void main()
+	{
+   		//FragColor = vec4(0.8f, 0.3f, 0.02f, 1.0f);
+		FragColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);
+	}
+)";
+
+//Geometry Shader source code - (tessellation stage) OPTIONAL
+
+
+// GLOBAL variable(s) on a global level for... below.
+
+// GPU Specs: Vulkan RT API, OpenGL 4.6
+const int apiMajor = 3;
+const int apiMinor = 3;
+const int BUFFERLOG = 512;
+
+// Common resolutions 640x480, 800x600, 1280 x 720
+const int wWidth = 1280;
+const int wHeight = 720;
+
+OTHER SAMPLES
+// glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+// glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+OTHER SAMPLES
+
+// glClearColor(Windown Background) - RGB Percent(20.8%,39.6%,30.2%) - hexadecimal color #35654d
+float rPcent = 0.0f;
+float gPcent = 0.0f;
+float bPcent = 0.0f;
+float pAlpha = 1.0f;		// 255
+
+/**/
+/*=================================================    End of Declaration    ========================================================*/
+
+/**/
+
+int main(void)
+{
+	/**/
+	// Local variable(s) local to... int main() {}
+	int success{};
+	char infoLog[BUFFERLOG]{};
+
+	glfwSetErrorCallback(glfw_error_callback);
+
+
+	/* Initialize the library */
+	if (!glfwInit())
+	{
+		exit(EXIT_FAILURE);
+	}
+
+
+	// Tell GLFW what version of OpenGL we are using. In this case we are using OpenGL 3.3
+	glfwWindowHint(GLFW_SAMPLES, 4); // 4x antialiasing
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, apiMajor);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, apiMinor);
+
+	// Tell GLFW we are using the CORE profile. So that means we only have the modern functions
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
+
+	/* Create a windowed mode window and its OpenGL context */
+	GLFWwindow* window = glfwCreateWindow(wWidth, wHeight, "OpenGL_CTT", nullptr, nullptr);
+
+	// Error check if the window fails to create
+	if (!window)
+	{
+		write_to_log("Failed to create GLFW window: %s", infoLog);
+		glfwTerminate();
+		exit(EXIT_FAILURE);
+	}
+
+	/* Make the window's context current */
+	glfwMakeContextCurrent(window);
+
+	//Load GLAD so it configures OpenGL
+	gladLoadGL();
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+	{
+		write_to_log("Failed to initialize GLAD: %s", infoLog);
+		exit(EXIT_FAILURE);
+	}
+	else
+	{
+		// Successfully loaded OpenGL
+		printf("OpenGL %s, GLSL %s\n", glGetString(GL_VERSION), glGetString(GL_SHADING_LANGUAGE_VERSION));
+	}
+	//
+	glfwSwapInterval(1);
+
+
+	// Generates Shader object using shaders default.vert and default.frag
+	//Shader shaderProgram("default.vert", "default.frag");
+
+
+	// A. Create Vertex Shader Object and get its reference
+	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);
+	glCompileShader(vertexShader);
+
+	glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+	if (!success)
+	{
+		glGetShaderInfoLog(vertexShader, BUFFERLOG, nullptr, infoLog);
+		write_to_log("Vertex Shader Compilation Failed: %s", infoLog);
+	}
+
+
+	// B. Create Fragment Shader Object and get its reference
+	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
+	glCompileShader(fragmentShader);
+
+	glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+	if (!success)
+	{
+		glGetShaderInfoLog(fragmentShader, BUFFERLOG, nullptr, infoLog);
+		write_to_log("Fragment Shader Compilation Failed: %s", infoLog);
+	}
+
+
+	// C. Create Shader Program Object and get its reference
+	GLuint shaderProgram = glCreateProgram();
+	glAttachShader(shaderProgram, vertexShader);
+	glAttachShader(shaderProgram, fragmentShader);
+	glLinkProgram(shaderProgram);
+
+	glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
+	if (!success)
+	{
+		glGetProgramInfoLog(shaderProgram, BUFFERLOG, nullptr, infoLog);
+		write_to_log("Shader Program Linking Failed: %s", infoLog);
+	}
+
+	// Delete the now useless Vertex and Fragment Shader objects
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader);
+
+
+	// --- VERTICES COORDINATES --- //
+	// None...
+	// --- VERTICES COORDINATES --- //
+
+
+	// Create reference containers to store our object names: Buffer, Vertex Array, Texture
+	GLuint VAO, VBO;
+
+	glGenVertexArrays(1, &VAO);			// Generate 1 object, Vertex Array Object (VAO)
+	glGenBuffers(1, &VBO);				// Create a vertex buffer, Vertex Buffer Object (VBO)
+
+	glBindVertexArray(VAO);				// Bind our objects to targets
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, s.xyzPoints.size() * sizeof(float), s.xyzPoints.data(), GL_STATIC_DRAW);
+
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+
+
+	/* HOUSE_KEEPING VBO */
+	glBindVertexArray(0);
+
+	glDeleteBuffers(1, &VBO);		// Setup is complete
+
+	/* HOUSE_KEEPING VBO */
+
+
+
+	/* Loop until the user closes the window */
+	while (!glfwWindowShouldClose(window))
+	{
+		glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+		glfwSetKeyCallback(window, esc_key_callback);
+
+		// Specify the color of the background.
+		glClearColor(rPcent, gPcent, bPcent, pAlpha);
+
+		/* Clean the back buffer and Render here */
+		glClear(GL_COLOR_BUFFER_BIT);
+
+
+		// --- RENDERING COMMANDS BEGIN --- //
+		glUseProgram(shaderProgram);
+		glBindVertexArray(VAO);
+
+
+
+		// Draw POINTS on a screen
+		glDrawArrays(GL_POINTS, 0, s.xyzPoints.size() / 3);
+
+
+		// --- RENDERING COMMANDS END --- //
+
+
+		/* Poll for and process events. DEVICE inputs per frame*/
+		glfwPollEvents();
+
+		/* Swap front and back buffers */
+		glfwSwapBuffers(window);
+	}
+
+
+	/* FINAL HOUSE_KEEPING */
+
+	// Delete all the objects
+	glDeleteVertexArrays(1, &VAO);
+	glDeleteProgram(shaderProgram);
+
+	// Delete window before ending the program
+	glfwDestroyWindow(window);
+
+	// Terminate GLFW before ending the program
+	glfwTerminate();
+
+	/* EXIT APPLICATION */
+
+
+	// Clean up and exit program
+	system("pause>0");
+	exit(EXIT_SUCCESS);
+}
+
+/**/
+/*=======================================================    End Main    ============================================================*/
+// ---														                                                                     --- //
+
+/**/
+/* DISCLAIMER !! In its design & use, this program is for 'instructional purposes' ONLY!.
+   Is NOT meant for Release.
+
+	 Project Title: openGLsetup coding/opengl-tutorials/OpenGL Part 3 - Main/Visuals.cpp
+	 Indie Developer: Developed by Johnny c/o 'WhiskyTango' Sharp Productions (2025)
+_________________________________________________________________________________________________________
+// WT Sharp Productions */
+
+// ---																															 --- //
+/*================================================    | End of GENERAL NOTES |    ===================================================*/
