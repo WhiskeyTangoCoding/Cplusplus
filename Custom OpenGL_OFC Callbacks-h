@@ -1,0 +1,36 @@
+// // Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+#ifndef CALLBACKS_H				// Check if CALLBACKS_H	is not defined
+#define CALLBACKS_H				// Define CALLBACKS_H to prevent multiple inclusions
+
+#include <cstdio>
+
+// ---	
+/*===============================================    Code Referencing Above    ======================================================*/
+
+// HEADER FILE: 'Declaration' / Definition' of a Function() - header.h file: / Source code: respectively
+/**/
+
+static void glfw_error_callback(int error, const char* description)
+{
+	fprintf(stderr, "Error: %s\n", description);
+}
+
+static void esc_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+		glfwSetWindowShouldClose(window, GLFW_TRUE);
+}
+
+static void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+	// Specify the viewport of OpenGL in the Window. In this case the viewport goes from x = 0, y = 0, to x = 1280, y = 720
+	glViewport(0, 0, width, height);
+}
+
+#endif // !CALLBACKS_H
+
+/**/
+/*=================================================    End of Declaration    ========================================================*/
+
+/**/
